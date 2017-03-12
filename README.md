@@ -1,40 +1,31 @@
-# electron-quick-start
+# LearnJS
 
-**Clone and run for a quick way to see Electron in action.**
+Maturitní práce z předmětu Informatika a komunikační technologie zaměřená na vývoj programu nebo hry se zaměřením na vzdělávání.
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation.
+Tato aplikace si dává za úkol seznámit studenty se základním fungováním programování webových stránek v jazyce HTML ve verzi HTML5 a CSS ve verzi CSS3 a naučit je tak základní fungování jednotlivých HTML tagů s interaktivním znázorněním právě vytvářeného kódu.
 
-**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
+## Development
 
-A basic Electron application needs just these files:
+Pro úspěšné spuštění aplikace bez instalátoru společně s upravovatelným zdrojovým kódem je zapotřebí
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+1. Windows 7 a novější / Linux / macOS (potřebná verze operačních systémů Linux a macOS nejsou přímo otestované)
+2. node.js 7.0 a novější (instalace v PATH je výhodou, díky snadnějšímu příkazu ke spuštění)
+3. Staženou aktuální verzi repozitáře, kterou stáhnete buď přímo na GitHubu, nebo pomocí git příkazu
 
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start).
+**Volitelné**
 
-## To Use
+1. git-scm pro stahování aktuálního branche přímo z příkazového řádku 
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+### Instalace
 
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
+0. Otevřete příkazový řádek ve složce, ve které chcete mít development soubory uloženy, pomocí `Shift` + `Right click`
+SEM VLOŽIT VOBRÁZEK
+1. *(Volitelné)* Pokud máte nainstalovaný git-scm, spusťte následující příkaz: ``git clone https://github.com/nejnto/LearnJS && cd LearnJS``
+2. Spusťte příkaz ``npm install`` pro stažení vyžadovaných knihoven
+3. Spusťte aplikaci příkazem ``npm start``
 
-Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/).
+Veškeré soubory aplikace naleznete ve složce `lib`
 
-## Other Example Apps
+### Hlášení chyb a připomínky
 
-For more example apps, see the
-[list of boilerplates](http://electron.atom.io/community/#boilerplates)
-created by the awesome electron community.
-
-#### License [CC0 1.0 (Public Domain)](LICENSE.md)
+Máte-li připomínky, kontaktujte mě přes E-mailovou adresu, nebo přímo zde na GitHubu v tomto projektu na stránce [Issues](https://github.com/nejento/LearnJS/issues)
