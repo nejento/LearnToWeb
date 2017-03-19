@@ -1,22 +1,29 @@
 {
-  "name": "electron-quick-start",
+  "name": "LearnJS",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Maturitní práce z předmětu Informatika a komunikační technologie zaměřená na vývoj programu nebo hry se zaměřením na vzdělávání",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/nejento/LearnJS",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "LearnJS",
+    "javascript",
+    "maturita",
+    "school-project",
+    "learn",
+    "html",
+    "css"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "nejento",
+  "license": "GPL-3.0",
   "devDependencies": {
     "electron": "^1.4.1"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8",
+    "jquery": "latest",
+    "materialize-css": "latest"
   }
 }

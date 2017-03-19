@@ -1,0 +1,22 @@
+.icon-block {
+    padding: 0 15px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+.side-nav {
+    width: 250px;
+}
+
+.container {
+    padding-left: 250px;
+    max-width: 1600px;
+    width: 90%;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
