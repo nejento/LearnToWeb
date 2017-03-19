@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>LearnJS</title>
+        <title>LearnJS - Vítejte</title>
 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="../node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection"/>
@@ -31,14 +29,27 @@
     </head>
     <body>
         <script>
-            let link = document.querySelector('link[rel="import"]');
-            let content = link.import;
-
-            // Grab DOM from warning.html's document.
-            let el = content.querySelector('.side-nav');
-
-            document.body.appendChild(el.cloneNode(true));
+            require('../assets/import.js');
         </script>
+
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper indigo darken-1">
+                    <a href="#!" class="brand-logo">Logo</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+                        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div id="container">
+            <div class="menu"></div>
+        </div>
+
     <!--
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>

@@ -5,8 +5,17 @@
     font-size: inherit;
 }
 
+.navbar-fixed-top {
+    -webkit-app-region: drag;
+}
+
+.navbar-fixed-top li, button {
+    -webkit-app-region: no-drag;
+}
+
 .side-nav {
     width: 250px;
+    top: inherit;
 }
 
 .container {
