@@ -25,13 +25,9 @@
                 console.log('Error loading import: ' + e.target.href);
             }
         </script>
-        <link rel="import" href="sideNav.html" onload="handleLoad(event)" onerror="handleError(event)">
+        <link rel="import" type="text/html" href="sideNav.html" onload="handleLoad(event)" onerror="handleError(event)">
     </head>
     <body>
-        <script>
-            require('../assets/import.js');
-        </script>
-
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper indigo darken-1">
@@ -169,5 +165,8 @@
             </div>
         </div>
     </footer>-->
+        <script>
+            require('../assets/import.js');
+        </script>
     </body>
 </html>

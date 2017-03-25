@@ -5,11 +5,11 @@
     font-size: inherit;
 }
 
-.navbar-fixed-top {
+.navbar-fixed {
     -webkit-app-region: drag;
 }
 
-.navbar-fixed-top li, button {
+.navbar-fixed li, button {
     -webkit-app-region: no-drag;
 }
 
