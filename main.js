@@ -12,26 +12,30 @@ const url = require('url');
 let mainWindow;
 
 function createWindow () {
-  // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1200, height: 800, minWidth: 1020, frame: false});
+    // Create the browser window.
+    mainWindow = new BrowserWindow({width: 1200, height: 800, minWidth: 1020, frame: false, show: false});
 
-  // and load the index.html of the app.
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'html/index.html'),
-    protocol: 'file:',
-    slashes: true
-  }));
+    // and load the index.html of the app.
+    mainWindow.loadURL(url.format({
+        pathname: path.join(__dirname, 'html/index.html'),
+        protocol: 'file:',
+        slashes: true
+    }));
 
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+    mainWindow.once('ready-to-show', () => {
+        mainWindow.show()
+    });
 
-  // Emitted when the window is closed.
-  mainWindow.on('closed', function () {
-    // Dereference the window object, usually you would store windows
-    // in an array if your app supports multi windows, this is the time
-    // when you should delete the corresponding element.
-    mainWindow = null
-  })
+    // Open the DevTools.
+    mainWindow.webContents.openDevTools();
+
+    // Emitted when the window is closed.
+    mainWindow.on('closed', function () {
+        // Dereference the window object, usually you would store windows
+        // in an array if your app supports multi windows, this is the time
+        // when you should delete the corresponding element.
+        mainWindow = null
+    })
 }
 
 // This method will be called when Electron has finished
