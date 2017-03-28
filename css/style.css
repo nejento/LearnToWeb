@@ -1,3 +1,11 @@
+:root {
+    --area-size: 736px;
+}
+
+body {
+    overflow: hidden;
+}
+
 .menu-right {
     float: right;
 }
@@ -5,15 +13,16 @@
 .icon-block {
     padding: 0 15px;
 }
+
 .icon-block .material-icons {
     font-size: inherit;
 }
 
-.navbar-fixed {
+.nav-wrapper {
     -webkit-app-region: drag;
 }
 
-.navbar-fixed li, button {
+.nav-wrapper li, button {
     -webkit-app-region: no-drag;
 }
 
@@ -21,15 +30,25 @@ nav ul a.close-button:hover {
     background-color: #e53935;
 }
 
+.nav-wrapper nav {
+    position: inherit;
+}
+
 .side-nav {
     width: 250px;
     top: inherit;
 }
 
-.container {
+.content {
+    width: 100%;
+    float: left;
     padding-left: 250px;
-    max-width: 1600px;
-    width: 90%;
+    transition: padding-left .2s cubic-bezier(.4,0,.2,1);
+}
+
+.main-area {
+    max-height: var(--area-size);
+    overflow-y: auto;
 }
 
 @media only screen and (max-width : 992px) {
