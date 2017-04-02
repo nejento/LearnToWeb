@@ -18,8 +18,18 @@ body {
     font-size: inherit;
 }
 
+nav, nav .nav-wrapper i {
+    height: 40px;
+    line-height: 40px;
+}
+
+.nav-wrapper nav {
+    position: inherit;
+}
+
 .nav-wrapper {
     -webkit-app-region: drag;
+    padding-left: 0.75rem;
 }
 
 .nav-wrapper li, button {
@@ -30,8 +40,12 @@ nav ul a.close-button:hover {
     background-color: #e53935;
 }
 
-.nav-wrapper nav {
-    position: inherit;
+.top-nav {
+    height: 80px;
+    line-height: 80px;
+    padding: 0 10px;
+    font-size: 30px;
+    font-weight: 400;
 }
 
 .side-nav {
