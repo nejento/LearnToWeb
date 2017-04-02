@@ -6,10 +6,6 @@ let currentWindow = remote.getCurrentWindow();
 //let style = getComputedStyle(currentWindow);
 
 currentWindow.on('resize', e => {
-    /*console.log(currentWindow.getSize()[1] - 64);
-    console.log(style);*/
-    //let color = currentWindow.getComputedStyle(document.body).getPropertyValue('--area-size');
-    //document.body.style.setProperty('--area-size', (currentWindow.getSize()[1] - 64) + "px");
     document.body.style.setProperty('--area-size', (currentWindow.getSize()[1] -64) + "px", '');
 });
 
@@ -30,4 +26,9 @@ document.querySelector('.max-button').addEventListener('click', e => {
 document.querySelector('.close-button').addEventListener('click', e => {
     let window = remote.getCurrentWindow();
     window.close();
+});
+
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
 });
