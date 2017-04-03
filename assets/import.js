@@ -9,6 +9,6 @@ Array.prototype.forEach.call(links, function (link) {
     } else if (link.href.match('cheatsheet.html')) {
         document.querySelector('div.cheatsheet').appendChild(clone);
     } else {
-        document.querySelector('.content').appendChild(clone);
+        document.querySelector('.main-area').appendChild(clone);
     }
 });

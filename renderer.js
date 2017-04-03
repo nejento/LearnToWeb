@@ -28,7 +28,37 @@ document.querySelector('.close-button').addEventListener('click', e => {
     window.close();
 });
 
+document.body.addEventListener('click', e => {
+    if (e.target.dataset.section) {
+        loadSite(e);
+        console.log("test1");
+    } /*else if (event.target.dataset.modal) {
+        handleModalTrigger(event)
+    } else if (event.target.classList.contains('modal-hide')) {
+        hideAllModals()
+    }*/
+});
+
 $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
 });
+
+function loadSite(event) {
+    hideSites();
+    const sectionId = event.target.dataset.section + '-section';
+    document.getElementById(sectionId).classList.add('is-shown');
+}
+
+function hideSites() {
+    const sections = document.querySelectorAll('.is-shown');
+    Array.prototype.forEach.call(sections, function (section) {
+        section.classList.remove('is-shown');
+    });
+    console.log("test");
+
+    /*const buttons = document.querySelectorAll('.nav-button.is-selected');
+    Array.prototype.forEach.call(buttons, function (button) {
+        button.classList.remove('is-selected')
+    });*/
+}

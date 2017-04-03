@@ -26,10 +26,13 @@
             }
             function handleError(e) {
                 console.log('Error loading import: ' + e.target.href);
+                console.log(e);
             }
         </script>
         <link rel="import" type="text/html" href="sideNav.html" onload="handleLoad(event)" onerror="handleError(event)">
         <link rel="import" type="text/html" href="cheatsheet.html" onload="handleLoad(event)" onerror="handleError(event)">
+        <link rel="import" type="text/html" href="tags/helloworld.html" onload="handleLoad(event)" onerror="handleError(event)">
+        <link rel="import" type="text/html" href="tags/firstarticle.html" onload="handleLoad(event)" onerror="handleError(event)">
     </head>
     <body>
         <nav>
@@ -51,7 +54,7 @@
                 <div class="menu"></div>
             </div>
             <div class="main-area">
-                <div class="top-nav indigo indigo-text text-lighten-5">Nadpis stránky</div>
+                <!--<div class="top-nav indigo indigo-text text-lighten-5">Nadpis stránky</div>
                 <p>Da page
                 l<br>
                 l<br>
@@ -60,7 +63,7 @@
                 l<br>
                 l<br>
                 l<br>
-                test</p>
+                test</p>-->
             </div>
         </div>
 
