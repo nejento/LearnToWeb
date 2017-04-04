@@ -19,12 +19,13 @@
   "author": "nejento",
   "license": "GPL-3.0",
   "devDependencies": {
-    "electron": "^1.4.1"
+
   },
   "dependencies": {
     "hammerjs": "^2.0.8",
     "highlight.js": "^9.10.0",
     "jquery": "latest",
-    "materialize-css": "latest"
+    "materialize-css": "latest",
+    "electron": "^1.4.1"
   }
 }
