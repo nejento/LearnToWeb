@@ -92,3 +92,12 @@ div.main-area section.section.is-shown {
     transform: translateX(0);
     transition: visibility 0s 0s linear , opacity .36s ease-out, transform .36s cubic-bezier(0.4, 0.0, 0.2, 1);;
 }
+
+.welcome {
+    height: 100vh;
+    /*line-height: 150px;*/
+    text-align: center;
+    padding: 150px 0 0 0;
+    font-size: 2.5em;
+    font-weight: 200;
+}
