@@ -19,11 +19,19 @@
         <!-- Inicializace Materialize.js -->
         <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
 
+        <!-- Automatický výška iframe -->
+        <script>
+            function resizeIframe(obj) {
+                obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            }
+        </script>
+
         <!-- Inicializace CodeMirror -->
         <script src="../cm/lib/codemirror.js"></script>
         <link rel="stylesheet" href="../cm/lib/codemirror.css">
         <link rel="stylesheet" href="../cm/theme/material.css">
         <script src="../cm/addon/selection/selection-pointer.js"></script>
+        <script src="../cm/addon/edit/closebrackets.js"></script>
         <script src="../cm/mode/xml/xml.js"></script>
         <script src="../cm/mode/css/css.js"></script>
         <script src="../cm/mode/javascript/javascript.js"></script>
@@ -40,6 +48,7 @@
         <link rel="import" type="text/html" href="main/firstarticle.html">
         <link rel="import" type="text/html" href="main/tables.html">
         <link rel="import" type="text/html" href="main/links.html">
+        <link rel="import" type="text/html" href="main/bigeditor.html">
     </head>
     <body>
         <nav>
@@ -100,6 +109,7 @@
                     window[elem.dataset.codename + "-" + elem.dataset.filename] = CodeMirror.fromTextArea(elem, {
                         lineNumbers: true,
                         matchBrackets: true,
+                        autoCloseBrackets: true,
                         mode: mode,
                         theme: 'material',
                         readOnly: (!!(elem.dataset.readonly && elem.dataset.readonly === "true"))
@@ -108,6 +118,7 @@
                     CodeMirror.fromTextArea(elem, {
                         lineNumbers: true,
                         matchBrackets: true,
+                        autoCloseBrackets: true,
                         mode: mode,
                         theme: 'material',
                         readOnly: (!!(elem.dataset.readonly && elem.dataset.readonly === "true"))
