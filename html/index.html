@@ -70,74 +70,47 @@
 
         <!-- Stylování bloků s kódem -->
         <script>
-            //Javascript Code blocks
-            $('.code-js').each((index, elem) => {
-                CodeMirror.fromTextArea(elem, {
-                    lineNumbers: true,
-                    matchBrackets: true,
-                    mode: 'javascript',
-                    theme: 'material'
-                });
-            });
+            $("[class^='code-']").each((index, elem) => {
+                let type = elem.className.replace("code-", ""),
+                mode;
+                switch (type) {
+                    case "js":
+                        mode = "javascript";
+                        break;
+                    case "css":
+                        mode = "css";
+                        break;
+                    case "html":
+                        mode = "htmlmixed";
+                        break;
+                    case "htmlonly":
+                        mode = "xml";
+                        break;
+                    case "sql":
+                        mode = "sql";
+                        break;
+                    case "php":
+                        mode = "php";
+                        break;
+                    default:
+                        mode = "html";
+                }
 
-            //CSS Code blocks
-            $('.code-css').each((index, elem) => {
-                CodeMirror.fromTextArea(elem, {
-                    lineNumbers: true,
-                    matchBrackets: true,
-                    mode: 'css',
-                    theme: 'material'
-                });
-            });
-
-            //HTML Code blocks
-            $('.code-html').each((index, elem) => {
-                CodeMirror.fromTextArea(elem, {
-                    lineNumbers: true,
-                    mode: "htmlmixed",
-                    selectionPointer: true,
-                    theme: 'material'
-                });
-            });
-
-            //HTML-only Code blocks
-            $('.code-htmlonly').each((index, elem) => {
-                CodeMirror.fromTextArea(elem, {
-                    lineNumbers: true,
-                    matchBrackets: true,
-                    mode: 'xml',
-                    theme: 'material'
-                });
-            });
-
-            //SQL Code blocks
-            $('.code-css').each((index, elem) => {
-                CodeMirror.fromTextArea(elem, {
-                    lineNumbers: true,
-                    matchBrackets: true,
-                    mode: 'sql',
-                    theme: 'material'
-                });
-            });
-
-            //php Code blocks
-            $('.code-php').each((index, elem) => {
-                CodeMirror.fromTextArea(elem, {
-                    lineNumbers: true,
-                    matchBrackets: true,
-                    mode: 'php',
-                    theme: 'material'
-                });
-            });
-
-            //sql Code blocks
-            $('.code-sql').each((index, elem) => {
-                CodeMirror.fromTextArea(elem, {
-                    lineNumbers: true,
-                    matchBrackets: true,
-                    mode: 'sql',
-                    theme: 'material'
-                });
+                if (elem.dataset.codename) {
+                    window[elem.dataset.codename] = CodeMirror.fromTextArea(elem, {
+                        lineNumbers: true,
+                        matchBrackets: true,
+                        mode: mode,
+                        theme: 'material'
+                    });
+                } else {
+                    CodeMirror.fromTextArea(elem, {
+                        lineNumbers: true,
+                        matchBrackets: true,
+                        mode: mode,
+                        theme: 'material'
+                    });
+                }
             });
         </script>
     </body>
