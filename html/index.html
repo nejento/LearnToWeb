@@ -22,6 +22,7 @@
         <!-- Inicializace CodeMirror -->
         <script src="../cm/lib/codemirror.js"></script>
         <link rel="stylesheet" href="../cm/lib/codemirror.css">
+        <link rel="stylesheet" href="../cm/theme/material.css">
         <script src="../cm/addon/selection/selection-pointer.js"></script>
         <script src="../cm/mode/xml/xml.js"></script>
         <script src="../cm/mode/css/css.js"></script>
@@ -74,7 +75,8 @@
                 CodeMirror.fromTextArea(elem, {
                     lineNumbers: true,
                     matchBrackets: true,
-                    mode: 'javascript'
+                    mode: 'javascript',
+                    theme: 'material'
                 });
             });
 
@@ -83,7 +85,8 @@
                 CodeMirror.fromTextArea(elem, {
                     lineNumbers: true,
                     matchBrackets: true,
-                    mode: 'css'
+                    mode: 'css',
+                    theme: 'material'
                 });
             });
 
@@ -92,7 +95,8 @@
                 CodeMirror.fromTextArea(elem, {
                     lineNumbers: true,
                     mode: "htmlmixed",
-                    selectionPointer: true
+                    selectionPointer: true,
+                    theme: 'material'
                 });
             });
 
@@ -101,7 +105,8 @@
                 CodeMirror.fromTextArea(elem, {
                     lineNumbers: true,
                     matchBrackets: true,
-                    mode: 'xml'
+                    mode: 'xml',
+                    theme: 'material'
                 });
             });
 
@@ -110,7 +115,8 @@
                 CodeMirror.fromTextArea(elem, {
                     lineNumbers: true,
                     matchBrackets: true,
-                    mode: 'sql'
+                    mode: 'sql',
+                    theme: 'material'
                 });
             });
 
@@ -119,7 +125,8 @@
                 CodeMirror.fromTextArea(elem, {
                     lineNumbers: true,
                     matchBrackets: true,
-                    mode: 'php'
+                    mode: 'php',
+                    theme: 'material'
                 });
             });
 
@@ -128,7 +135,8 @@
                 CodeMirror.fromTextArea(elem, {
                     lineNumbers: true,
                     matchBrackets: true,
-                    mode: 'sql'
+                    mode: 'sql',
+                    theme: 'material'
                 });
             });
         </script>
