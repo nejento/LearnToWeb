@@ -39,7 +39,7 @@ document.body.addEventListener('click', e => {
     }*/
 });
 
-$(document).ready(function(){
+$(document).ready(() => {
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
 });
@@ -52,10 +52,9 @@ function loadSite(event) {
 
 function hideSites() {
     const sections = document.querySelectorAll('.is-shown');
-    Array.prototype.forEach.call(sections, function (section) {
+    Array.prototype.forEach.call(sections, section => {
         section.classList.remove('is-shown');
     });
-    console.log("test");
 
     /*const buttons = document.querySelectorAll('.nav-button.is-selected');
     Array.prototype.forEach.call(buttons, function (button) {
