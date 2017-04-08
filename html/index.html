@@ -101,14 +101,16 @@
                         lineNumbers: true,
                         matchBrackets: true,
                         mode: mode,
-                        theme: 'material'
+                        theme: 'material',
+                        readOnly: (!!(elem.dataset.readonly && elem.dataset.readonly === "true"))
                     });
                 } else {
                     CodeMirror.fromTextArea(elem, {
                         lineNumbers: true,
                         matchBrackets: true,
                         mode: mode,
-                        theme: 'material'
+                        theme: 'material',
+                        readOnly: (!!(elem.dataset.readonly && elem.dataset.readonly === "true"))
                     });
                 }
             });
