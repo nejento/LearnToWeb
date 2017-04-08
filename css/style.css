@@ -82,7 +82,7 @@ div.main-area section.section {
     visibility: hidden;
     opacity: 0;
     transform: translateX(-20px);
-    transition: visibility 0s .12s linear , opacity .12s ease-in, transform .12s cubic-bezier(0.4, 0.0, 0.2, 1);;
+    transition: visibility 0s .12s linear , opacity .12s ease-in, transform .12s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 div.main-area section.section.is-shown {
@@ -90,7 +90,7 @@ div.main-area section.section.is-shown {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
-    transition: visibility 0s 0s linear , opacity .36s ease-out, transform .36s cubic-bezier(0.4, 0.0, 0.2, 1);;
+    transition: visibility 0s 0s linear , opacity .36s ease-out, transform .36s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .welcome {
