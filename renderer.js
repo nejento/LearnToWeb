@@ -3,7 +3,8 @@
 // All of the Node.js APIs are available in this process.
 const remote = require('electron').remote,
       fs = require('fs-extra'),
-      os = require('os');
+      os = require('os'),
+      dialog = remote.dialog;
 let currentWindow = remote.getCurrentWindow();
 //let style = getComputedStyle(currentWindow);
 
@@ -40,6 +41,8 @@ document.body.addEventListener('click', e => {
         loadSite(e);
     } else if (e.target.dataset.result) {
         iframe(e);
+    } else if (e.target.dataset.save) {
+        savefiles(e);
     }/*else if (event.target.dataset.modal) {
         handleModalTrigger(event)
     } else if (event.target.classList.contains('modal-hide')) {
@@ -101,12 +104,12 @@ function iframe(event) {
         $(`iframe.${codename}`).attr('src', result);
     })
 
-};
+}
 
 function downloadCode(codename, callback) {
     const codeID = event.target.dataset.result,
-        blocks = $('[data-codename="' + codename + '"]'),
-        dir = os.homedir() + "/.learnjs/";
+          blocks = $('[data-codename="' + codename + '"]'),
+          dir = os.homedir() + "/.learnjs/";
 
     fs.ensureDir(dir, err => {
         if (err) throw err;
@@ -119,5 +122,23 @@ function downloadCode(codename, callback) {
             }
             callback(result);
         })
+    });
+}
+
+function savefiles(event) {
+    const codename = event.target.dataset.save,
+          blocks = $('[data-codename="' + codename + '"]');
+    dialog.showOpenDialog({
+        title: "Vyberte složku",
+        properties: ["openDirectory"]
+    }, (folderPaths) => {
+        if (folderPaths === undefined){
+            console.log("Nebyla vybrána žádná složka kam by bylo možné uložit tento projekt");
+        } else {
+            console.log(folderPaths);
+            for (let i = 0; i < blocks.length; i++) {
+                fs.writeFileSync(folderPaths + "/" + blocks[i].dataset.filename, window[codename + "-" + blocks[i].dataset.filename].getValue());
+            }
+        }
     });
 }
