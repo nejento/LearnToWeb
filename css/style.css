@@ -63,7 +63,7 @@ nav ul a.close-button:hover {
     width: 100%;
     float: left;
     padding-left: 250px;
-    transition: padding-left .2s cubic-bezier(.4,0,.2,1);
+    /*transition: padding-left .2s cubic-bezier(.4,0,.2,1);*/
 }
 
 .main-area {
