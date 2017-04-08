@@ -96,8 +96,8 @@
                         mode = "html";
                 }
 
-                if (elem.dataset.codename) {
-                    window[elem.dataset.codename] = CodeMirror.fromTextArea(elem, {
+                if (elem.dataset.codename && elem.dataset.filename) {
+                    window[elem.dataset.codename + "-" + elem.dataset.filename] = CodeMirror.fromTextArea(elem, {
                         lineNumbers: true,
                         matchBrackets: true,
                         mode: mode,

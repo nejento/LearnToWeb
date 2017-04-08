@@ -1,7 +1,9 @@
 // This file is required by the index.html file and will
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
-const remote = require('electron').remote;
+const remote = require('electron').remote,
+      fs = require('fs-extra'),
+      os = require('os');
 let currentWindow = remote.getCurrentWindow();
 //let style = getComputedStyle(currentWindow);
 
@@ -94,6 +96,23 @@ function updateBread(section) {
 
 //Zpracování kódu do iframu
 function processCode(event) {
-    const codeID = event.target.dataset.result;
+    const codeID = event.target.dataset.result,
+          blocks = $('[data-codename="' + codeID + '"]'),
+          dir = os.homedir() + "/.learnjs/";
+
+    fs.ensureDir(dir, err => {
+        if (err) throw err;
+        fs.emptyDir(dir, err => {
+            if (err) throw err;
+            for (let i = 0; i < blocks.length; i++) {
+                fs.writeFile(os.homedir() + "/.learnjs/" + blocks[i].dataset.filename, window[codeID + "-" + blocks[i].dataset.filename].getValue(), (err) => {
+                    if (err) throw err;
+                    console.log('The file has been saved!');
+                });
+            }
+        })
+    });
+
+
 
 }
