@@ -36,7 +36,9 @@ document.querySelector('.close-button').addEventListener('click', e => {
 document.body.addEventListener('click', e => {
     if (e.target.dataset.section) {
         loadSite(e);
-    } /*else if (event.target.dataset.modal) {
+    } else if (e.target.dataset.result) {
+        processCode(e);
+    }/*else if (event.target.dataset.modal) {
         handleModalTrigger(event)
     } else if (event.target.classList.contains('modal-hide')) {
         hideAllModals()
@@ -88,4 +90,10 @@ function updateBread(section) {
 
     finalbreadcrumb = finalbreadcrumb + '</span>';
     $("#windowName").replaceWith(finalbreadcrumb);
+}
+
+//Zpracování kódu do iframu
+function processCode(event) {
+    const codeID = event.target.dataset.result;
+
 }

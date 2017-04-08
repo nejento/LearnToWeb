@@ -110,8 +110,9 @@ div.main-area section.section.is-shown {
 }
 
 .contentpage {
-    margin: 0 15px;
+    padding: 0 15px;
     max-width: 1200px;
+    margin: auto;
 }
 
 .tabs {
