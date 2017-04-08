@@ -5,15 +5,18 @@ const remote = require('electron').remote;
 let currentWindow = remote.getCurrentWindow();
 //let style = getComputedStyle(currentWindow);
 
+//Resize okna a zobrazení scrollbaru
 currentWindow.on('resize', e => {
     document.body.style.setProperty('--area-size', (currentWindow.getSize()[1] -40) + "px", '');
 });
 
+//Minimalizace okna
 document.querySelector('.min-button').addEventListener('click', e => {
     let window = remote.getCurrentWindow();
     window.minimize();
 });
 
+//Maximalizace okna
 document.querySelector('.max-button').addEventListener('click', e => {
     let window = remote.getCurrentWindow();
     if (!window.isMaximized()) {
@@ -23,11 +26,13 @@ document.querySelector('.max-button').addEventListener('click', e => {
     }
 });
 
+//Zavření okna
 document.querySelector('.close-button').addEventListener('click', e => {
     let window = remote.getCurrentWindow();
     window.close();
 });
 
+//Kliknutí v menu
 document.body.addEventListener('click', e => {
     if (e.target.dataset.section) {
         loadSite(e);
@@ -38,22 +43,26 @@ document.body.addEventListener('click', e => {
     }*/
 });
 
+//Akce po spuštění aplikace
 $(document).ready(() => {
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
+
+    //Zobrazení Welcome screen
     document.getElementById("welcome-section").classList.add('is-shown');
     updateBread("welcome-section");
 });
 
+//Načtení stránky
 function loadSite(event) {
     hideSites();
     const sectionId = event.target.dataset.section + '-section';
     document.getElementById(sectionId).classList.add('is-shown');
     updateBread(sectionId);
-    /*document.getElementById("windowName")*/
 
 }
 
+//Zakrytí předchozí stránky
 function hideSites() {
     const sections = document.querySelectorAll('.is-shown');
     Array.prototype.forEach.call(sections, section => {
@@ -66,6 +75,7 @@ function hideSites() {
     });*/
 }
 
+//Aktualizace hlavičky
 function updateBread(section) {
     let breadcrumb = document.getElementById(section).getAttribute("breadcrumb");
     let finalbreadcrumb = '<span id="windowName">';
