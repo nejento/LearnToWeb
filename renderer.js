@@ -6,7 +6,7 @@ let currentWindow = remote.getCurrentWindow();
 //let style = getComputedStyle(currentWindow);
 
 currentWindow.on('resize', e => {
-    document.body.style.setProperty('--area-size', (currentWindow.getSize()[1] -64) + "px", '');
+    document.body.style.setProperty('--area-size', (currentWindow.getSize()[1] -40) + "px", '');
 });
 
 document.querySelector('.min-button').addEventListener('click', e => {

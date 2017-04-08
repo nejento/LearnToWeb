@@ -1,5 +1,5 @@
 :root {
-    --area-size: 736px;
+    --area-size: 760px;
 }
 
 body {
@@ -66,7 +66,7 @@ nav ul a.close-button:hover {
     /*transition: padding-left .2s cubic-bezier(.4,0,.2,1);*/
 }
 
-.main-area {
+.section {
     max-height: var(--area-size);
     overflow-y: auto;
 }
@@ -100,6 +100,20 @@ div.main-area section.section.is-shown {
     padding: 150px 0 0 0;
     font-size: 2.5em;
     font-weight: 200;
-    background: url(../html/main/imgs/code.png) no-repeat fixed bottom;
+    background: url(../html/main/imgs/code.png) no-repeat bottom;
     background-attachment: inherit;
+    background-size: contain;
+}
+
+#welcome-section.section {
+    overflow-y: hidden;
+}
+
+.contentpage {
+    margin: 0 15px;
+    max-width: 1200px;
+}
+
+.tabs {
+    overflow-x: hidden;
 }
