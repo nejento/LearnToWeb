@@ -2,9 +2,16 @@
     <section id="helloworld-section" class="section" breadcrumb="HTML > Ahoj světe">
         <div class="top-nav indigo indigo-text text-lighten-5">Ahoj světe</div>
         <script>
-            let myCodeMirror = CodeMirror.fromTextArea(myTextArea);
+            const input = $('.jsCodeArea');
+            let myCodeMirror = CodeMirror.fromTextArea(input, {
+                //various options - see CodeMirror docs
+                lineNumbers: true,
+                lineWrapping: true,
+                theme: 'mbo',
+                mode: 'javascript',
+            });
         </script>
-        <textarea rows="4" cols="50">
+        <textarea id="jsCodeArea" rows="4" cols="50">
         A testing textarea
         </textarea>
 
