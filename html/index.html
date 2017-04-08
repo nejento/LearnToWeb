@@ -20,9 +20,16 @@
         <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
 
         <!-- Inicializace CodeMirror -->
-        <script src="../lib/codemirror.js"></script>
-        <link rel="stylesheet" href="../lib/codemirror.css">
-        <script src="../lib/javascript.js"></script>
+        <script src="../cm/lib/codemirror.js"></script>
+        <link rel="stylesheet" href="../cm/lib/codemirror.css">
+        <script src="../cm/addon/selection/selection-pointer.js"></script>
+        <script src="../cm/mode/xml/xml.js"></script>
+        <script src="../cm/mode/css/css.js"></script>
+        <script src="../cm/mode/javascript/javascript.js"></script>
+        <script src="../cm/mode/htmlmixed/htmlmixed.js"></script>
+        <script src="../cm/mode/sql/sql.js"></script>
+        <script src="../cm/mode/clike/clike.js"></script>
+        <script src="../cm/mode/php/php.js"></script>
 
         <!-- Importy -->
         <link rel="import" type="text/html" href="sideNav.html">
@@ -54,9 +61,76 @@
 
         <div class="cheatsheet"></div>
 
+        <!-- Import externích HTML souborů a renderer -->
         <script>
             require('../assets/import.js');
             require('../renderer');
+        </script>
+
+        <!-- Stylování bloků s kódem -->
+        <script>
+            //Javascript Code blocks
+            $('.code-js').each((index, elem) => {
+                CodeMirror.fromTextArea(elem, {
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    mode: 'javascript'
+                });
+            });
+
+            //CSS Code blocks
+            $('.code-css').each((index, elem) => {
+                CodeMirror.fromTextArea(elem, {
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    mode: 'css'
+                });
+            });
+
+            //HTML Code blocks
+            $('.code-html').each((index, elem) => {
+                CodeMirror.fromTextArea(elem, {
+                    lineNumbers: true,
+                    mode: "htmlmixed",
+                    selectionPointer: true
+                });
+            });
+
+            //HTML-only Code blocks
+            $('.code-htmlonly').each((index, elem) => {
+                CodeMirror.fromTextArea(elem, {
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    mode: 'xml'
+                });
+            });
+
+            //SQL Code blocks
+            $('.code-css').each((index, elem) => {
+                CodeMirror.fromTextArea(elem, {
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    mode: 'sql'
+                });
+            });
+
+            //php Code blocks
+            $('.code-php').each((index, elem) => {
+                CodeMirror.fromTextArea(elem, {
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    mode: 'php'
+                });
+            });
+
+            //sql Code blocks
+            $('.code-sql').each((index, elem) => {
+                CodeMirror.fromTextArea(elem, {
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    mode: 'sql'
+                });
+            });
         </script>
     </body>
 </html>

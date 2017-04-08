@@ -1,18 +1,29 @@
 <template class="template">
     <section id="helloworld-section" class="section" breadcrumb="HTML > Ahoj světe">
         <div class="top-nav indigo indigo-text text-lighten-5">Ahoj světe</div>
-        <script>
-            const input = $('.jsCodeArea');
-            let myCodeMirror = CodeMirror.fromTextArea(input, {
-                //various options - see CodeMirror docs
-                lineNumbers: true,
-                lineWrapping: true,
-                theme: 'mbo',
-                mode: 'javascript',
-            });
-        </script>
-        <textarea id="jsCodeArea" rows="4" cols="50">
-        A testing textarea
+        <textarea id="code" class="code-html">
+<html style="color: green">
+  <!-- this is a comment -->
+  <head>
+    <title>Mixed HTML Example</title>
+    <style type="text/css">
+      h1 {font-family: comic sans; color: #f0f;}
+      div {background: yellow !important;}
+      body {
+          max-width: 50em;
+          margin: 1em 2em 1em 5em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mixed HTML Example</h1>
+    <script>
+      function jsFunc(arg1, arg2) {
+          if (arg1 && arg2) document.body.innerHTML = "achoo";
+      }
+    </script>
+  </body>
+</html>
         </textarea>
 
         <p>Da page
