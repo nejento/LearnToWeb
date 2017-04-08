@@ -39,7 +39,7 @@ document.body.addEventListener('click', e => {
     if (e.target.dataset.section) {
         loadSite(e);
     } else if (e.target.dataset.result) {
-        processCode(e);
+        iframe(e);
     }/*else if (event.target.dataset.modal) {
         handleModalTrigger(event)
     } else if (event.target.classList.contains('modal-hide')) {
@@ -95,24 +95,29 @@ function updateBread(section) {
 }
 
 //Zpracování kódu do iframu
-function processCode(event) {
+function iframe(event) {
+    const codename = event.target.dataset.result;
+    downloadCode(codename, result => {
+        $(`iframe.${codename}`).attr('src', result);
+    })
+
+};
+
+function downloadCode(codename, callback) {
     const codeID = event.target.dataset.result,
-          blocks = $('[data-codename="' + codeID + '"]'),
-          dir = os.homedir() + "/.learnjs/";
+        blocks = $('[data-codename="' + codename + '"]'),
+        dir = os.homedir() + "/.learnjs/";
 
     fs.ensureDir(dir, err => {
         if (err) throw err;
         fs.emptyDir(dir, err => {
+            let result = true;
             if (err) throw err;
             for (let i = 0; i < blocks.length; i++) {
-                fs.writeFile(os.homedir() + "/.learnjs/" + blocks[i].dataset.filename, window[codeID + "-" + blocks[i].dataset.filename].getValue(), (err) => {
-                    if (err) throw err;
-                    console.log('The file has been saved!');
-                });
+                fs.writeFileSync(os.homedir() + "/.learnjs/" + blocks[i].dataset.filename, window[codeID + "-" + blocks[i].dataset.filename].getValue());
+                if (blocks[i].dataset.filename.includes(".html") || blocks[i].dataset.filename.includes(".php")) result = os.homedir() + "/.learnjs/" + blocks[i].dataset.filename;
             }
+            callback(result);
         })
     });
-
-
-
 }
