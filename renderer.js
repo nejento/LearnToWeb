@@ -31,7 +31,6 @@ document.querySelector('.close-button').addEventListener('click', e => {
 document.body.addEventListener('click', e => {
     if (e.target.dataset.section) {
         loadSite(e);
-        console.log("test1");
     } /*else if (event.target.dataset.modal) {
         handleModalTrigger(event)
     } else if (event.target.classList.contains('modal-hide')) {
@@ -48,6 +47,9 @@ function loadSite(event) {
     hideSites();
     const sectionId = event.target.dataset.section + '-section';
     document.getElementById(sectionId).classList.add('is-shown');
+    updateBread(sectionId);
+    /*document.getElementById("windowName")*/
+
 }
 
 function hideSites() {
@@ -60,4 +62,18 @@ function hideSites() {
     Array.prototype.forEach.call(buttons, function (button) {
         button.classList.remove('is-selected')
     });*/
+}
+
+function updateBread(section) {
+    let breadcrumb = document.getElementById(section).getAttribute("breadcrumb");
+    let finalbreadcrumb = '<span id="windowName">';
+    if (breadcrumb.includes(">")) {
+        breadcrumb = document.getElementById(section).getAttribute("breadcrumb").split(">");
+        for (let i = 0; i < breadcrumb.length; i++) {
+            finalbreadcrumb = finalbreadcrumb + '<a class="breadcrumb">' + breadcrumb[i].trim() + '</a>';
+        }
+    } else finalbreadcrumb = finalbreadcrumb + '<a class="breadcrumb">' + breadcrumb + '</a>';
+
+    finalbreadcrumb = finalbreadcrumb + '</span>';
+    $("#windowName").replaceWith(finalbreadcrumb);
 }
