@@ -20,22 +20,13 @@
         <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
 
         <!-- Importy -->
-        <script>
-            function handleLoad(e) {
-                console.log('Loaded import: ' + e.target.href);
-            }
-            function handleError(e) {
-                console.log('Error loading import: ' + e.target.href);
-                console.log(e);
-            }
-        </script>
-        <link rel="import" type="text/html" href="sideNav.html" onload="handleLoad(event)" onerror="handleError(event)">
-        <link rel="import" type="text/html" href="cheatsheet.html" onload="handleLoad(event)" onerror="handleError(event)">
-        <link rel="import" type="text/html" href="main/welcome.html" onload="handleLoad(event)" onerror="handleError(event)">
-        <link rel="import" type="text/html" href="main/helloworld.html" onload="handleLoad(event)" onerror="handleError(event)">
-        <link rel="import" type="text/html" href="main/firstarticle.html" onload="handleLoad(event)" onerror="handleError(event)">
-        <link rel="import" type="text/html" href="main/tables.html" onload="handleLoad(event)" onerror="handleError(event)">
-        <link rel="import" type="text/html" href="main/links.html" onload="handleLoad(event)" onerror="handleError(event)">
+        <link rel="import" type="text/html" href="sideNav.html">
+        <link rel="import" type="text/html" href="cheatsheet.html">
+        <link rel="import" type="text/html" href="main/welcome.html">
+        <link rel="import" type="text/html" href="main/helloworld.html">
+        <link rel="import" type="text/html" href="main/firstarticle.html">
+        <link rel="import" type="text/html" href="main/tables.html">
+        <link rel="import" type="text/html" href="main/links.html">
     </head>
     <body>
         <nav>
