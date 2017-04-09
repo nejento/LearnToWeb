@@ -62,6 +62,7 @@ nav ul a.close-button:hover {
 .side-nav {
     width: 250px;
     top: inherit;
+    height: calc(100% - 40px);
 }
 
 .content {
