@@ -100,7 +100,7 @@ div.main-area section.section.is-shown {
 .welcome {
     height: 100vh;
     text-align: center;
-    padding: 150px 0 0 0;
+    padding: 100px 0 0 0;
     font-size: 2.5em;
     font-weight: 200;
     background: url(../html/main/imgs/code.png) no-repeat bottom;
