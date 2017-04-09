@@ -24,6 +24,11 @@ body {
     font-size: inherit;
 }
 
+img.headericon {
+    margin: -3px 5px 0 0;
+    vertical-align: middle;
+}
+
 nav, nav .nav-wrapper i {
     height: 40px;
     line-height: 40px;
