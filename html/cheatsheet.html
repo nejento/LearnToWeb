@@ -165,4 +165,76 @@
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
     </div>
+
+    <!-- CSS Box model -->
+    <div id="cheatbox" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Bloky</h4>
+            <img src="main/imgs/boxmodel.png" style="float:left; margin:0 15px 15px 0">
+            <div>
+                <p>
+                    <code>padding</code>: Prostor mezi borderem (okrajem boxu) a samotným obsahem<br/>
+                    <code>border</code>: Okraj boxu<br/>
+                    <code>margin</code>: Prostor vně boxu<br/>
+                    <br/>
+                    Velikosti prostorů se zadávají v následujícím pořadí: <code>margin: top right bottom left;</code><br/>
+                    Příklad: <code>margin: 5px 10px 2px 0;</code> vytvoří vnější odsazení, kdy mezera nahoře bude 5 pixelů velká, vpravo 10 pixelů, dole 2 pixely a vlevo mezera nebude vůbec.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS Selectory -->
+    <div id="cheatsel" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Bloky</h4>
+            <div class="row valign-wrapper">
+                <div class="col s11"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Blokový neutrální element">&lt;div</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Styl divu"><span style="color: #a6e22e">style=</span><span style="color: #e6db74">&quot;color:#ff0000&quot;</span><span style="color: #f92672">&gt;</span></span>
+  <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Obsah divu"><span style="color: #f92672">&lt;h2&gt;</span>Nadpis<span style="color: #f92672">&lt;/h2&gt;</span>
+  <span style="color: #f92672">&lt;p&gt;</span>Paragraf<span style="color: #f92672">&lt;/p&gt;</span></span>
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací značka">&lt;/div&gt;</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('div')"><i class="material-icons">content_copy</i></a></div>
+            </div>
+            <div class="row valign-wrapper">
+                <div class="col s11"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;p&gt;</span>Toto je <span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Řádkový neutrální element">&lt;span</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Styl spanu"><span style="color: #a6e22e">style=</span><span style="color: #e6db74">&quot;color:blue;background:yellow&quot;</span></span><span style="color: #f92672">&gt;</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Obsah spanu">zvýrazněný</span><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací značka">&lt;/span&gt;</span> text<span style="color: #f92672">&lt;p&gt;</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('span')"><i class="material-icons">content_copy</i></a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS Pseudo třídy -->
+    <div id="cheatpseudo" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Bloky</h4>
+            <div class="row valign-wrapper">
+                <div class="col s11"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Blokový neutrální element">&lt;div</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Styl divu"><span style="color: #a6e22e">style=</span><span style="color: #e6db74">&quot;color:#ff0000&quot;</span><span style="color: #f92672">&gt;</span></span>
+  <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Obsah divu"><span style="color: #f92672">&lt;h2&gt;</span>Nadpis<span style="color: #f92672">&lt;/h2&gt;</span>
+  <span style="color: #f92672">&lt;p&gt;</span>Paragraf<span style="color: #f92672">&lt;/p&gt;</span></span>
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací značka">&lt;/div&gt;</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('div')"><i class="material-icons">content_copy</i></a></div>
+            </div>
+            <div class="row valign-wrapper">
+                <div class="col s11"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;p&gt;</span>Toto je <span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Řádkový neutrální element">&lt;span</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Styl spanu"><span style="color: #a6e22e">style=</span><span style="color: #e6db74">&quot;color:blue;background:yellow&quot;</span></span><span style="color: #f92672">&gt;</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Obsah spanu">zvýrazněný</span><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací značka">&lt;/span&gt;</span> text<span style="color: #f92672">&lt;p&gt;</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('span')"><i class="material-icons">content_copy</i></a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS Třídy -->
+    <div id="cheatbasic" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Bloky</h4>
+            <div class="row valign-wrapper">
+                <div class="col s11"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Blokový neutrální element">&lt;div</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Styl divu"><span style="color: #a6e22e">style=</span><span style="color: #e6db74">&quot;color:#ff0000&quot;</span><span style="color: #f92672">&gt;</span></span>
+  <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Obsah divu"><span style="color: #f92672">&lt;h2&gt;</span>Nadpis<span style="color: #f92672">&lt;/h2&gt;</span>
+  <span style="color: #f92672">&lt;p&gt;</span>Paragraf<span style="color: #f92672">&lt;/p&gt;</span></span>
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací značka">&lt;/div&gt;</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('div')"><i class="material-icons">content_copy</i></a></div>
+            </div>
+            <div class="row valign-wrapper">
+                <div class="col s11"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;p&gt;</span>Toto je <span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Řádkový neutrální element">&lt;span</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Styl spanu"><span style="color: #a6e22e">style=</span><span style="color: #e6db74">&quot;color:blue;background:yellow&quot;</span></span><span style="color: #f92672">&gt;</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Obsah spanu">zvýrazněný</span><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací značka">&lt;/span&gt;</span> text<span style="color: #f92672">&lt;p&gt;</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('span')"><i class="material-icons">content_copy</i></a></div>
+            </div>
+        </div>
+    </div>
 </template>
