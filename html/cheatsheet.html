@@ -2,8 +2,17 @@
 <template class="template">
     <script>
         const clipboard = require('electron').clipboard;
+        function copy(type) {
+            switch(type) {
+                case "a":
+                    clipboard.writeText('<a href=\"http://google.com\">Klikni na mě</a>');
+                    break;
+                case "img":
+                    clipboard.writeText('<img src=\"obrazek.jpg\" alt=\"Pes s kočkou\" width=\"42\" height=\"42\">');
+                    break;
+            }
+        }
     </script>
-
     <!-- Odkazy a -->
     <div id="cheata" class="modal bottom-sheet">
         <div class="modal-content">
@@ -11,7 +20,7 @@
             <!-- border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff -->
             <div class="row valign-wrapper">
                 <div class="col s11"><div class="" style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírací tag">&lt;a</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Adresa odkazu"><span style="color: #a6e22e">href=</span><span style="color: #e6db74">&quot;http://google.com&quot;</span></span><span style="color: #f92672">&gt;</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zobrazený text">Klikni na mě<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/a&gt;</span></pre></div></div>
-                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="clipboard.writeHTML(<a href='http://google.com'>Klikni na mě</a>);"><i class="material-icons">content_copy</i></a></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('a')"><i class="material-icons">content_copy</i></a></div>
             </div>
             <h5>Relativní odkaz (potápěč)</h5>
             <p>
@@ -27,7 +36,7 @@
             <h4>Obrázky</h4>
             <div class="row valign-wrapper">
                 <div class="col s11"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;img</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Adresa obrázku"><span style="color: #a6e22e">src=</span><span style="color: #e6db74">&quot;obrazek.jpg&quot;</span></span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Popis obrázku"><span style="color: #a6e22e">alt=</span><span style="color: #e6db74">&quot;Pes s kočkou&quot;</span></span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Šířka obrázku"><span style="color: #a6e22e">width=</span><span style="color: #e6db74">&quot;42&quot;</span></span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Výška obrázku"><span style="color: #a6e22e">height=</span><span style="color: #e6db74">&quot;42&quot;</span></span><span style="color: #f92672">&gt;</span></pre></div></div>
-                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="clipboard.writeHTML(<img src='obrazek.jpg' alt='Pes s kočkou' width='42' height='42'>);"><i class="material-icons">content_copy</i></a></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('img')"><i class="material-icons">content_copy</i></a></div>
             </div>
             <h5>Relativní odkaz (potápěč)</h5>
             <p>
