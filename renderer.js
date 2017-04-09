@@ -9,7 +9,7 @@ const remote = require('electron').remote,
 let currentWindow = remote.getCurrentWindow();
 //let style = getComputedStyle(currentWindow);
 
-remote.getCurrentWindow().removeAllListeners();
+remote.getCurrentWindow().removeAllListeners('resize');
 
 //Resize okna a zobrazení scrollbaru
 currentWindow.on('resize', e => {
