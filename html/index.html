@@ -74,6 +74,7 @@
         <!-- Import externích HTML souborů a renderer -->
         <script>
             require('../assets/import.js');
+            require('../renderer');
         </script>
 
         <!-- Stylování bloků s kódem -->
@@ -103,7 +104,6 @@
                     default:
                         mode = "html";
                 }
-
                 if (elem.dataset.codename && elem.dataset.filename) {
                     window[elem.dataset.codename + "-" + elem.dataset.filename] = CodeMirror.fromTextArea(elem, {
                         lineNumbers: true,
@@ -124,7 +124,6 @@
                     });
                 }
             });
-            require('../renderer');
         </script>
     </body>
 </html>

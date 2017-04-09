@@ -132,3 +132,11 @@ div.main-area section.section.is-shown {
 .bigeditor .CodeMirror {
     height: auto;
 }
+
+code {
+    padding: 0.2em 0;
+    margin: 0;
+    font-size: 1em;
+    background-color: rgba(90,90,90,0.1);
+    border-radius: 3px;
+}

@@ -2,9 +2,11 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 const remote = require('electron').remote,
-      fs = require('fs-extra'),
+      clipboard = require('electron').clipboard,
       os = require('os'),
-      dialog = remote.dialog;
+      dialog = remote.dialog,
+      fs = require('fs-extra');
+
 let currentWindow = remote.getCurrentWindow();
 //let style = getComputedStyle(currentWindow);
 
