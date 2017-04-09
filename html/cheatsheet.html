@@ -5,10 +5,24 @@
         function copy(type) {
             switch(type) {
                 case "a":
-                    clipboard.writeText('<a href=\"http://google.com\">Klikni na mě</a>');
+                    clipboard.writeText(`<a href=\"http://google.com\">Klikni na mě</a>`);
                     break;
                 case "img":
-                    clipboard.writeText('<img src=\"obrazek.jpg\" alt=\"Pes s kočkou\" width=\"42\" height=\"42\">');
+                    clipboard.writeText(`<img src=\"obrazek.jpg\" alt=\"Pes s kočkou\" width=\"42\" height=\"42\">`);
+                    break;
+                case "ol":
+                    clipboard.writeText(`<ol type=a>
+  <li>Praha</li>
+  <li>Brno</li>
+  <li>Ostrava</li>
+</ol>`);
+                    break;
+                case "ul":
+                    clipboard.writeText(`<ul>
+  <li>Káva</li>
+  <li>Mléko</li>
+  <li>Čaj</li>
+</ul>`);
                     break;
             }
         }
@@ -50,10 +64,22 @@
     <div id="cheatul" class="modal bottom-sheet">
         <div class="modal-content">
             <h4>Seznamy</h4>
-            <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            <div class="row valign-wrapper">
+                <div class="col s5"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Číslovaný seznam">&lt;ol</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Typ seznamu"><span style="color: #a6e22e">type=</span><span style="color: #e6db74">a</span><span style="color: #f92672">&gt;</span></span>
+  <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Položka seznamu"><span style="color: #f92672">&lt;li&gt;</span>Praha<span style="color: #f92672">&lt;/li&gt;</span>
+  <span style="color: #f92672">&lt;li&gt;</span>Brno<span style="color: #f92672">&lt;/li&gt;</span>
+  <span style="color: #f92672">&lt;li&gt;</span>Ostrava<span style="color: #f92672">&lt;/li&gt;</span></span>
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/ol&gt;</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('ol')"><i class="material-icons">content_copy</i></a></div>
+                <div class="col s5"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nečíslovaný seznam">&lt;ul&gt;</span>
+  <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Položka seznamu"><span style="color: #f92672">&lt;li&gt;</span>Káva<span style="color: #f92672">&lt;/li&gt;</span>
+  <span style="color: #f92672">&lt;li&gt;</span>Mléko<span style="color: #f92672">&lt;/li&gt;</span>
+  <span style="color: #f92672">&lt;li&gt;</span>Čaj<span style="color: #f92672">&lt;/li&gt;</span></span>
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/ul&gt;</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('ul')"><i class="material-icons">content_copy</i></a></div>
+            </div>
+            <h5>Typy číslovaných seznamů</h5>
+                <code>1</code> 1, 2, 3 • <code>A</code> A, B, C • <code>a</code> a, b, c • <code>I</code> I, II, III • <code>i</code> i, ii, iii
         </div>
     </div>
 
