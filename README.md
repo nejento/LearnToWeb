@@ -19,7 +19,6 @@ Pro úspěšné spuštění aplikace bez instalátoru společně s upravovateln�
 ### Instalace
 
 0. Otevřete příkazový řádek ve složce, ve které chcete mít development soubory uloženy, pomocí `Shift` + `Right click`
-SEM VLOŽIT VOBRÁZEK
 1. *(Volitelné)* Pokud máte nainstalovaný git-scm, spusťte následující příkaz: ``git clone https://github.com/nejnto/LearnJS && cd LearnJS``
 2. Spusťte příkaz ``npm install`` pro stažení vyžadovaných knihoven
 3. Spusťte aplikaci příkazem ``npm start``
