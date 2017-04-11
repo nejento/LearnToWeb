@@ -18,7 +18,9 @@
   ],
   "author": "nejento",
   "license": "GPL-3.0",
-  "devDependencies": {},
+  "devDependencies": {
+    "electron": "^1.4.1",
+  },
   "dependencies": {
     "fs-extra": "^2.1.2",
     "jquery": "latest",
