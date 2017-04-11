@@ -114,6 +114,16 @@ div.main-area section.section.is-shown {
     overflow-y: hidden;
 }
 
+.about {
+    /*height: 100vh;*/
+    text-align: center;
+    padding-top: 20px;
+}
+
+#about-section.section {
+    overflow-y: hidden;
+}
+
 .contentpage {
     padding: 0 15px;
     max-width: 1200px;
