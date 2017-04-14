@@ -21,5 +21,10 @@ pipeline {
         archiveArtifacts(artifacts: 'LearnJS.zip', onlyIfSuccessful: true)
       }
     }
+    stage('Clean workspace') {
+      steps {
+        deleteDir()
+      }
+    }
   }
 }
