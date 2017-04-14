@@ -182,6 +182,10 @@ div.main-area section.section.is-shown {
     height: auto;
 }
 
+.contentpage h4 {
+    margin-top: 2.5rem;
+}
+
 .collapsible-header-disabled {
     display: block;
     cursor: pointer;
