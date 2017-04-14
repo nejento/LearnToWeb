@@ -2,9 +2,12 @@
     <section id="helloworld-section" class="section" breadcrumb="HTML > Ahoj světe">
         <div class="top-nav indigo indigo-text text-lighten-5">Ahoj světe</div>
         <div class="contentpage">
+            <p class="caption">Psát web není žádná věda. Jen za pomocí HTML a CSS lze vytvořit web během pár chvil.</p>
+            <p>Ukážeme ti, co k tomu potřebuješ, abys pochopil základ fungování HTML a CSS a byl si tak schopen vytvořit vlastní malou stránku.</p>
+
             <div class="card indigo lighten-1 white-text">
                 <div class="card-content">
-                    <p>Podívejte se na to, jak takový kus webu může vypadat. Můžete si zkusit v něm i něco upravit a poté zobrazit výsledek</p>
+                    <p>Podívej se, jak takový kus webu může vypadat. Zkus si v něm něco upravit a poté zobrazit výsledek.</p>
                 </div>
                 <div class="card-tabs">
                     <ul class="tabs tabs-fixed-width tabs-transparent">
@@ -15,50 +18,57 @@
                 <div class="card-content indigo lighten-4 black-text">
                     <div id="html">
                         <textarea id="code" class="code-html" data-codename="firstcode" data-filename="index.html">
-<html style="color: green">
-  <!-- this is a comment -->
+<!DOCTYPE html>
+<html>
+  <!-- Tohle je komentář, zobrazí se jen ve zdrojovém kódu -->
   <head>
-    <title>Mixed HTML Example</title>
+    <title>Můj první web</title>
     <style type="text/css">
-      h1 {font-family: comic sans; color: #f0f;}
-      div {background: yellow !important;}
-      body {
-          max-width: 50em;
-          margin: 1em 2em 1em 5em;
-      }
+      h1 {font-family: "Comic Sans MS", cursive, sans-serif; color: #f0f;}
     </style>
   </head>
   <body>
-    <h1>Mixed HTML Example</h1>
-    <script>
-      function jsFunc(arg1, arg2) {
-          if (arg1 && arg2) document.body.innerHTML = "achoo";
-      }
-    </script>
+    <h1>Můj první web</h1>
+    <p>Vítejte na mém úžasném webu, kde uvidíte hromadu užitečných informací!</p>
   </body>
-</html>
-</textarea>
+</html></textarea>
                     </div>
                     <div id="resulthw">
                         <iframe class="display firstcode" frameBorder="0" onload="resizeIframe(this)"></iframe>
                     </div>
                 </div>
             </div>
-            <p>Da page
-                1451115461654168451<br>
-                l45455421654651<br>
-                l5421685421564<br>
-                l5415015645648<br>l<br>
-                l4518451<br>
-                54485415461223456l<br>
-                l45542132457489<br>
-                test</p>
-            <ul>
-                <li>test1</li>
-                <li>test1</li>
-                <li>test1</li>
-                <li>test1</li>
-                <li>test1</li>
+            <h4>K čemu je HTML?</h4>
+            <p class="caption">HTML (<strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage) je kostra webové stránky.</p>
+            <P>Bez ní by nebylo možné vytvořit webovou stránku tak, aby se mohla v prohlížeči zobrazit. <strong>HTML netvoří vzhled!</strong> O to se stará až CSS.</p>
+            <h4>Základní pravidla</h4>
+            <ul class="collapsible" data-collapsible="expandable">
+                <li>
+                    <div class="collapsible-header active indigo lighten-1 white-text"><span class="list">1</span>HTML je tvořeno značkami, neboli tagy</div>
+                    <div class="collapsible-body">
+                        <span class="caption">Vše ve špičatých závorkách jsou HTML tagy:</span>
+                        <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírací tag">&lt;h1&gt;</span>Nadpis<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/h1&gt;</span> <span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírací tag">&lt;p&gt;</span>Odstavec<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/p&gt;</span> <span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírací tag">&lt;div&gt;</span>Blokový element<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/div&gt;</span></pre></div></div>
+                </li>
+                <li>
+                    <div class="collapsible-header indigo lighten-1 white-text"><span class="list">2</span>Všechny otevřené tagy <strong>musí být uzavřeny</strong> (kromě pár výjimek, kde by to bylo zbytečné)</div>
+                    <div class="collapsible-body"><img src="main/imgs/openclosetag.png" height="68" width="423"/>
+                        <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;a&gt;</span>Toto je odkaz<span style="color: #f92672">&lt;/a&gt;</span></pre></div>
+                        <span class="caption">Uzavírací tag <strong>musí</strong> mít <code>/</code> jako první znak v závorkách!</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header indigo lighten-1 white-text"><span class="list">3</span>Fungují podobně jako závorky v matematice</div>
+                    <div class="collapsible-body">
+                        <span class="caption">Tag <strong>musí</strong> být otevřen i uzavřen uvnitř jiného tagu!</span>
+                        <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #e65100" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírám div">&lt;div&gt;</span><span style="color:#cddc39" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírám odstavec">&lt;p&gt;</span>Odstavec v divu s textem <span style="color: #4caf50" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírám span">&lt;span&gt;</span>ve spanu<span style="color: #4caf50" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírám span">&lt;/span&gt;</span>! Super!<span style="color: #cddc39" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírám odstavec">&lt;/p&gt;</span><span style="color:#e65100" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírám div">&lt;/div&gt;</span></pre></div>
+                        <div class="card-panel red darken-2">
+                            <span class="white-text">
+                                <span class="caption">Takhle ne!</span>
+                                <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #e65100" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírám div">&lt;div&gt;</span><span style="color:#cddc39" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírám odstavec">&lt;p&gt;</span>Odstavec v divu s textem ve spanu! <span style="color: #4caf50" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírám span">&lt;span&gt;</span>Super!<span style="color: #cddc39" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="JEŠTĚ NEBYL UZAVŘEN SPAN!">&lt;/p&gt;</span><span style="color: #4caf50" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="JSEM MIMO ODSTAVEC!">&lt;/span&gt;</span><span style="color:#e65100" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírám div">&lt;/div&gt;</span></pre></div>
+                            </span>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
