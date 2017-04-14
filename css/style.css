@@ -115,9 +115,34 @@ div.main-area section.section.is-shown {
 }
 
 .about {
-    /*height: 100vh;*/
+    height: calc(100vh - 160px);
     text-align: center;
-    padding-top: 20px;
+    padding: 20px 0 10px;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.about p {
+    margin: 0;
+}
+
+.aboutcenter {
+    margin-top: 20%;
+}
+
+.logos {
+    height: 120px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logos img{
+    height: 100%;
+    margin: 0 20px;
+}
+
+.logos a {
+    cursor: pointer;
 }
 
 #about-section.section {
