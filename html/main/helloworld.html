@@ -2,8 +2,8 @@
     <section id="helloworld-section" class="section" breadcrumb="HTML > Ahoj světe">
         <ul id="dropdownhelloworld" class="dropdown-content">
             <li><a onclick="scroll('#hwkcemu')">K čemu je HTML</a></li>
-            <li><a onclick="scroll('#hwpravidla')">Základní pravidla</a></li>
             <li><a onclick="scroll('#hwvcem')">V čem tvořit stránky?</a></li>
+            <li><a onclick="scroll('#hwpravidla')">Základní pravidla</a></li>
             <li><a onclick="scroll('#hwzaciname')">Začínáme novou stránku</a></li>
         </ul>
         <div class="top-nav indigo indigo-text text-lighten-5">
@@ -52,6 +52,18 @@
             <p class="caption">HTML (<strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage) je kostra webové stránky.</p>
             <P>Bez ní by nebylo možné vytvořit webovou stránku tak, aby se mohla v prohlížeči zobrazit. <strong>HTML netvoří vzhled!</strong> O to se stará až CSS.</p>
 
+            <h4 id="hwvcem">V čem tvořit stránky?</h4>
+            <p class="caption">Webové stránky lze tvořit i v jednoduchém poznámkovém bloku. Pokud ale chcete vidět zvýrazněné zabarvené tagy, lépe se orientovat v kódu, rychleji nacházet chyby, mít možnost našeptávače, je vhodné použít nějaký z následujících programů.</p>
+            Upozoruňuji, že toto nejsou všechny dostupné editory, avšak jde o editory, které jsem osobně vyzkoušel a mohu je tak doporučit. Všechny tyto programy jsou zdarma ke stažení.
+            <div class="collection">
+                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('http://www.pspad.com/cz/download.php')">PSPad (Jan Fiala)<i class="material-icons menu-right">launch</i></a>
+                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('http://notepad-plus-plus.org/download/')">Notepad++ (Don Ho)<i class="material-icons menu-right">launch</i></a>
+                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('https://code.visualstudio.com')">Visual Studio Code (Microsoft)<i class="material-icons menu-right">launch</i></a>
+                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('http://atom.io')">Atom (GitHub)<i class="material-icons menu-right">launch</i></a>
+                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('http://brackets.io')">Brackets (Adobe)<i class="material-icons menu-right">launch</i></a>
+            </div>
+            <p class="caption">Nyní ovšem můžete také upravovat kód v tomto programu. Kód se bude barevně zvýrazňovat, bude vyhledávat chyby a ukáže i přímý výstup kódu na kartě <strong>Výsledek</strong>. Stačí přepnout na Velký editor, kde si lze i kód přímo stáhnout.</p>
+
             <h4 id="hwpravidla">Základní pravidla</h4>
             <ul class="collapsible" data-collapsible="expandable">
                 <li>
@@ -81,18 +93,6 @@
                     </div>
                 </li>
             </ul>
-
-            <h4 id="hwvcem">V čem tvořit stránky?</h4>
-            <p class="caption">Webové stránky lze tvořit i v jednoduchém poznámkovém bloku. Pokud ale chcete vidět zvýrazněné zabarvené tagy, lépe se orientovat v kódu, rychleji nacházet chyby, mít možnost našeptávače, je vhodné použít nějaký z následujících programů.</p>
-            Upozoruňuji, že toto nejsou všechny dostupné editory, avšak jde o editory, které jsem osobně vyzkoušel a mohu je tak doporučit. Všechny tyto programy jsou zdarma ke stažení.
-            <div class="collection">
-                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('http://www.pspad.com/cz/download.php')">PSPad (Jan Fiala)<i class="material-icons menu-right">launch</i></a>
-                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('http://notepad-plus-plus.org/download/')">Notepad++ (Don Ho)<i class="material-icons menu-right">launch</i></a>
-                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('https://code.visualstudio.com')">Visual Studio Code (Microsoft)<i class="material-icons menu-right">launch</i></a>
-                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('http://atom.io')">Atom (GitHub)<i class="material-icons menu-right">launch</i></a>
-                <a class="collection-item waves-effect" style="cursor:pointer" onclick="shell.openExternal('http://brackets.io')">Brackets (Adobe)<i class="material-icons menu-right">launch</i></a>
-            </div>
-            <p class="caption">Nyní ovšem můžete také upravovat kód v tomto programu. Kód se bude barevně zvýrazňovat, bude vyhledávat chyby a ukáže i přímý výstup kódu na kartě <strong>Výsledek</strong>. Stačí přepnout na Velký editor, kde si lze i kód přímo stáhnout.</p>
 
             <h4 id="hwzaciname">Začínáme novou stránku</h4>
             <p class="caption">Každá nová HTML stránka musí obsahovat některé řádky, aby mohla fungovat.</p>
