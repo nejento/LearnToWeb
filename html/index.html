@@ -31,6 +31,17 @@
             const shell = require('electron').shell
         </script>
 
+        <!-- Rychlé přeskočené k tématu -->
+        <script>
+            function scroll(where) {
+                const container = $('.section'),
+                      scrollTo = $(where);
+                container.scrollTop(
+                    scrollTo.offset().top - container.offset().top
+                );
+            }
+        </script>
+
         <!-- Inicializace CodeMirror -->
         <script src="../cm/lib/codemirror.js"></script>
         <link rel="stylesheet" href="../cm/lib/codemirror.css">
