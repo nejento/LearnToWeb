@@ -2,10 +2,12 @@
     <section id="firstarticle-section" class="section" breadcrumb="HTML > První článek">
         <div class="top-nav indigo indigo-text text-lighten-5">První článek</div>
         <div class="contentpage">
+            <p class="caption">Nyní již máme připravené vše pro to, abychom mohli začít tvořit web. Pojďme tedy vytvořit nový článek s obrázkem!</p>
+
+            <h4>Základní HTML tagy pro článek</h4>
+            <h5>Nadpisy stránek</h5>
+            <p>Nadpisy článků se tvoří pomocí tagů <code>&lt;h1&gt;</code> až <code>&lt;h6&gt;</code></p>
             <div class="card indigo lighten-1 white-text">
-                <div class="card-content">
-                    <p>Podívejte se na to, jak takový kus webu může vypadat. Můžete si zkusit v něm i něco upravit a poté zobrazit výsledek</p>
-                </div>
                 <div class="card-tabs">
                     <ul class="tabs tabs-fixed-width tabs-transparent">
                         <li class="tab"><a class="active" href="#htmlfa">HTML</a></li>
@@ -15,34 +17,79 @@
                 <div class="card-content indigo lighten-4 black-text">
                     <div id="htmlfa">
                         <textarea id="code" class="code-html" data-codename="firstarticle" data-filename="index.html">
-<html style="color: green">
-  <!-- this is a comment -->
-  <head>
-    <title>Mixed HTML Example</title>
-    <style type="text/css">
-      h1 {font-family: comic sans; color: #f0f;}
-      div {background: yellow !important;}
-      body {
-          max-width: 50em;
-          margin: 1em 2em 1em 5em;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Mixed HTML Example</h1>
-    <script>
-      function jsFunc(arg1, arg2) {
-          if (arg1 && arg2) document.body.innerHTML = "achoo";
-      }
-    </script>
-  </body>
-</html>
-</textarea>
+<h1>Nadpis 1. úrovně</h1>
+<h2>Nadpis 2. úrovně</h2>
+<h3>Nadpis 3. úrovně</h3>
+<h4>Nadpis 4. úrovně</h4>
+<h5>Nadpis 5. úrovně</h5>
+<h6>Nadpis 6. úrovně</h6></textarea>
                     </div>
                     <div id="resultfa">
                         <iframe class="display firstarticle" frameBorder="0" onload="resizeIframe(this)"></iframe>
                     </div>
                 </div>
+            </div>
+
+            <h5>Odstavce</h5>
+            <p>Odstavce se uvádí do tagů <code>&lt;p&gt;&lt;/p&gt;</code>.</p>
+            <p>K odsazení textu na další řádek slouží tag <code>&lt;br/&gt;</code>, který položíte na místo, kde se má text zalomit na další řádek. Právě zde se jedná o již dříve zmiňovanou výjimku, kdy není nutné uvádět uzavírací tag, jelikož <code>&lt;br/&gt;</code> pouze odsadí text na další řádek.</p>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Vyzkoušej si to. Zkus opravit text tak, aby druhý řádek byl skutečně na druhém řádku.</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlfa1">HTML</a></li>
+                        <li class="tab"><a href="#resultfa1" data-result="firstarticle1">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlfa1">
+                        <textarea id="code" class="code-html" data-codename="firstarticle1" data-filename="index.html">
+<h1>Kterak jsem odsazoval text</h1>
+<p>Psal jsem článek a chtěl jsem odsadit text na druhý řádek, ale co se nastalo.
+NEŠLO MI TO! (Tento řádek měl být odsazený, ale bohužel se mi to nedařilo)</p></textarea>
+                    </div>
+                    <div id="resultfa1">
+                        <iframe class="display firstarticle1" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card-panel indigo accent-2">
+                <span class="white-text"><strong>TIP:</strong> Texty můžeme také oddělit horizontální čarou <code>&lt;hr/&gt;</code>, která se stejně jako <code>&lt;br/&gt;</code> zapisuje jen jednou. Vyzkoušej si to v předešlé ukázce.</span>
+            </div>
+
+            <h5>Zvýrazňování textů</h5>
+            <p>Některé texty je potřeba ztučnit, nebo napsat kurzívou. K tomu slouží tagy <code>&lt;b&gt;tučné&lt;/b&gt;</code> a <code>&lt;i&gt;kurzíva&lt;/i&gt;</code></p>
+            <p>Mezi další tagy patří například <code>&lt;del&gt;přeškrtnuté&lt;/del&gt;</code> a <code>&lt;ins&gt;podtržené&lt;/ins&gt;</code>. U matematiky a citací jsou vhodné tagy <code>&lt;sup&gt;horní index&lt;/sup&gt;</code> a <code>&lt;sub&gt;dolní index&lt;/sub&gt;</code></p>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Vyzkoušej si to. Zkus uvedená slova označit správnými styly.</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlfa2">HTML</a></li>
+                        <li class="tab"><a href="#resultfa2" data-result="firstarticle2">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlfa2">
+                        <textarea id="code" class="code-html" data-codename="firstarticle2" data-filename="index.html">
+<h1>Kterak jsem zvýrazňoval text</h1>
+<p>Udělej ze mě tučný text</p>
+<p>Udělej ze mě text kurzívou</p>
+<p>Udělej ze mě přeškrtnutý text</p>
+<p>Udělej ze mě podtržený text</p>
+<p>Udělej ze mě horní index</p>
+<p>Udělej ze mě dolní index</p></textarea>
+                    </div>
+                    <div id="resultfa2">
+                        <iframe class="display firstarticle2" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card-panel indigo accent-2">
+                <span class="white-text"><strong>TIP:</strong> Lze použít i tagy <code>&lt;strong&gt;tučně zdůrazněné&lt;/strong&gt;</code> a <code>&lt;em&gt;zdůrazněné kurzívou&lt;/em&gt;</code>. Oba tyto tagy se v prohlížečích zobrazí stejně, rozdíl je v typu významu, kdy <code>&lt;b&gt;</code> a <code>&lt;i&gt;</code> znamenají jen tučný text nebo text kurzívou ale <code>&lt;strong&gt;</code> a <code>&lt;em&gt;</code> text zdůrazňují. Toto může hrát význam u různých čteček, nebo u funkcí usnadnění přístupu, například u předčítání.</span>
             </div>
         </div>
     </section>
