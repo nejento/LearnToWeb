@@ -4,7 +4,6 @@ const remote = require('electron').remote,
       fs = require('fs-extra');
 
 let currentWindow = remote.getCurrentWindow();
-//let style = getComputedStyle(currentWindow);
 
 remote.getCurrentWindow().removeAllListeners('resize');
 
@@ -52,8 +51,8 @@ document.body.addEventListener('click', e => {
 
 //Akce po spuštění aplikace
 $(document).ready(() => {
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
+    $('.collapsible').collapsible();
 
     //Zobrazení Welcome screen
     document.getElementById("welcome-section").classList.add('is-shown');
