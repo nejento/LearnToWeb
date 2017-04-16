@@ -1,13 +1,23 @@
 <template class="template">
     <section id="links-section" class="section" breadcrumb="HTML > Odkazy">
-        <div class="top-nav indigo indigo-text text-lighten-5">Odkazy</div>
+        <ul id="dropdownlinks" class="dropdown-content">
+            <li><a onclick="scroll('#linkrelativ')">Relativní odkazy</a></li>
+            <li><a onclick="scroll('#linkup')">Vynoření</a></li>
+            <li><a onclick="scroll('#linkdown')">Zanoření</a></li>
+            <li><a onclick="scroll('#linklink')">Odkazy</a></li>
+            <li><a onclick="scroll('#linkid')">Záložky</a></li>
+        </ul>
+        <div class="top-nav indigo indigo-text text-lighten-5">
+            Odkazy
+            <a class="dropdown-button right white-text" style="cursor:pointer" data-activates="dropdownlinks" data-constrainWidth="false" data-beloworigin="true"><i class="material-icons">menu</i></a></div>
+        </div>
         <div class="contentpage">
             <img src="main/imgs/potapec.png" width="249" height="220" style="float:right"/>
             <p class="caption">Funkce odkazů je v případě HTML velice důležitou součástí. Již z názvu HTML je jasné, že textu dodává schopnost navíc a tou je právě propojení s dalšími stránkami</p>
             <p>Odkazy dělíme na dva druhy. Buď na <strong>absolutní</strong>, kdy cestou k souboru je jasně daná adresa od začátku až do konce, například <em>https://google.com</em> nebo <em>C:/Users/Jaromír/Desktop</em><br/>
             Druhým odkazem je takzvaný <strong>relativní</strong> odkaz, kdy se pohybujeme ve složkách z místa, kde se právě nacházíme, nebo v jakém je aktuální soubor uložen, například <em>../index.html</em></p>
 
-            <h4>Relativní odkazy (potápěc)</h4>
+            <h4 id="linkrelativ">Relativní odkazy (potápěc)</h4>
             <p class="caption">Relativní odkazy jsou užitečné pro pohyb v blízkém okolí. Pokud bude celý web nebo aplikace v různých umístěních, absolutní cesty by odkazovaly na stále stejné místo a obrázky by se tak nezobrazily.</p>
             <div class="row">
                 <div class="col s9">
@@ -19,7 +29,7 @@
             </div>
 
 
-            <h5>Vynoření</h5>
+            <h5 id="linkup">Vynoření</h5>
             <div class="row">
                 <div class="col s9">
                     <p>Ze složky se vynoříme použitím dvou teček v adrese odkazu: <code>../</code><br/>
@@ -29,7 +39,7 @@
                 <div class="col s3"><img src="main/imgs/odkaz2.png" height="150" width="180"/></div>
             </div>
 
-            <h5>Zanoření</h5>
+            <h5 id="linkdown">Zanoření</h5>
             <div class="row">
                 <div class="col s9">
                     <p>Do složky se zanoříme napsáním názvu složky: <code>imgs/</code></p>
@@ -42,7 +52,49 @@
                 <span class="white-text"><strong>TIP:</strong> Pokud odkazuješ na soubor, který je ve stejné složce, můžeš pro přehlednost napsat adresu <code>./fotka.jpg</code>. <code>./</code> značí aktuální složku, avšak je možné toto vynechat a napsat tak rovnou adresu <code>fotka.jpg</code></span>
             </div>
 
-            <h4></h4>
+            <h4 id="linklink">Odkazy</h4>
+            <p class="caption">Web by bez odkazů nebyl tím, čím je. Pojďme si vyzkoušet přidat na stránky odkaz</p>
+            <p>Odkaz může odkazovat na adresu relativní i absolutní. Najeďte myší na jednotlivé části následující ukázky</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Otevírací tag odkazu">&lt;a</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Adresa"><span style="color: #a6e22e">href=</span><span style="color: #e6db74">&quot;about.html&quot;</span></span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Kam se odkaz otevře"><span style="color: #a6e22e">target=</span><span style="color: #e6db74">&quot;_blank&quot;</span></span><span style="color: #f92672">&gt;</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Text, který se stane odkazem">O mně</span><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/a&gt;</span></pre></div>
+            <p><code>target="_blank"</code> zařídí, že se odkaz otevře v nové kartě / okně prohlížeče. Nemusí být uveden. V takovém případě se odkaz otevře v aktuální kartě.</p>
+
+            <h5 id="linkid">Záložky</h5>
+            <p class="caption">Odkazovat lze i přímo v dokumentu. Můžete se odkázat na jednotlivé části dokumentu, kdy se po kliknutí na takový odkaz, posune stránka na tag, který obsahuje dané ID.</p>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Tento příklad je funkční, avšak doporučujeme si toto vyzkoušet přímo v prohlížeči.</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmllink1">HTML</a></li>
+                        <li class="tab"><a href="#resultlink1" data-result="links">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmllink1">
+                            <textarea id="code" class="code-html" data-codename="links" data-filename="index.html">
+<h1>Menu</h1>
+<p>
+  <a href="#clanek1">První článek</a>
+  <a href="#clanek2">Druhý článek</a>
+</p>
+
+<h1>Články</h1>
+<h2 id="clanek1">Můj první článek</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+Praesent vulputate mi sit amet metus porttitor placerat.</p>
+<hr/>
+<h2 id="clanek2">Můj druhý článek</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+Praesent vulputate mi sit amet metus porttitor placerat.</p></textarea>
+                    </div>
+                    <div id="resultlink1">
+                        <iframe class="display links" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </section>
 </template>
