@@ -1,11 +1,20 @@
 <template class="template">
     <section id="firstarticle-section" class="section" breadcrumb="HTML > První článek">
-        <div class="top-nav indigo indigo-text text-lighten-5">První článek</div>
+        <ul id="dropdownfirstarticle" class="dropdown-content">
+            <li><a onclick="scroll('#fanadpis')">Nadpisy stránek</a></li>
+            <li><a onclick="scroll('#faodstavec')">Odstavce</a></li>
+            <li><a onclick="scroll('#fazvyrazneni')">Zvýrazňování textů</a></li>
+            <li><a onclick="scroll('#faobrazek')">Obrázek</a></li>
+            <li><a onclick="scroll('#faprvni')">Máme první článek!</a></li>
+        </ul>
+        <div class="top-nav indigo indigo-text text-lighten-5">
+            První článek
+            <a class="dropdown-button right white-text" style="cursor:pointer" data-activates="dropdownfirstarticle" data-constrainWidth="false" data-beloworigin="true"><i class="material-icons">menu</i></a></div>
         <div class="contentpage">
             <p class="caption">Nyní již máme připravené vše pro to, abychom mohli začít tvořit web. Pojďme tedy vytvořit nový článek s obrázkem!</p>
 
             <h4>Základní HTML tagy pro článek</h4>
-            <h5>Nadpisy stránek</h5>
+            <h5 id="fanadpis">Nadpisy stránek</h5>
             <p>Nadpisy článků se tvoří pomocí tagů <code>&lt;h1&gt;</code> až <code>&lt;h6&gt;</code></p>
             <div class="card indigo lighten-1 white-text">
                 <div class="card-tabs">
@@ -30,7 +39,7 @@
                 </div>
             </div>
 
-            <h5>Odstavce</h5>
+            <h5 id="faodstavec">Odstavce</h5>
             <p>Odstavce se uvádí do tagů <code>&lt;p&gt;&lt;/p&gt;</code>.</p>
             <p>K odsazení textu na další řádek slouží tag <code>&lt;br/&gt;</code>, který položíte na místo, kde se má text zalomit na další řádek. Právě zde se jedná o již dříve zmiňovanou výjimku, kdy není nutné uvádět uzavírací tag, jelikož <code>&lt;br/&gt;</code> pouze odsadí text na další řádek.</p>
             <div class="card indigo lighten-1 white-text">
@@ -59,7 +68,7 @@ NEŠLO MI TO! (Tento řádek měl být odsazený, ale bohužel se mi to nedařil
                 <span class="white-text"><strong>TIP:</strong> Texty můžeme také oddělit horizontální čarou <code>&lt;hr/&gt;</code>, která se stejně jako <code>&lt;br/&gt;</code> zapisuje jen jednou. Vyzkoušej si to v předešlé ukázce.</span>
             </div>
 
-            <h5>Zvýrazňování textů</h5>
+            <h5 id="fazvyrazneni">Zvýrazňování textů</h5>
             <p>Některé texty je potřeba ztučnit, nebo napsat kurzívou. K tomu slouží tagy <code>&lt;b&gt;tučné&lt;/b&gt;</code> a <code>&lt;i&gt;kurzíva&lt;/i&gt;</code></p>
             <p>Mezi další tagy patří například <code>&lt;del&gt;přeškrtnuté&lt;/del&gt;</code> a <code>&lt;ins&gt;podtržené&lt;/ins&gt;</code>. U matematiky a citací jsou vhodné tagy <code>&lt;sup&gt;horní index&lt;/sup&gt;</code> a <code>&lt;sub&gt;dolní index&lt;/sub&gt;</code></p>
             <div class="card indigo lighten-1 white-text">
@@ -92,7 +101,7 @@ NEŠLO MI TO! (Tento řádek měl být odsazený, ale bohužel se mi to nedařil
                 <span class="white-text"><strong>TIP:</strong> Lze použít i tagy <code>&lt;strong&gt;tučně zdůrazněné&lt;/strong&gt;</code> a <code>&lt;em&gt;zdůrazněné kurzívou&lt;/em&gt;</code>. Oba tyto tagy se v prohlížečích zobrazí stejně, rozdíl je v typu významu, kdy <code>&lt;b&gt;</code> a <code>&lt;i&gt;</code> znamenají jen tučný text nebo text kurzívou ale <code>&lt;strong&gt;</code> a <code>&lt;em&gt;</code> text zdůrazňují. Toto může hrát význam u různých čteček, nebo u funkcí usnadnění přístupu, například u předčítání.</span>
             </div>
 
-            <h5>Obrázek</h5>
+            <h5 id="faobrazek">Obrázek</h5>
             <p class="caption">Web bez obrázku by byla jen nudná hromada textu. Vložení obrázku není nic obtížného.</p>
             <img src="main/imgs/soubory.png" height="100" width="117"/>
             <p>Ulož obrázek do stejné složky hned vedle html souboru, ve kterém bude obrázek umístěn. Poté přidej do HTML kódu tento tag</p>
@@ -104,7 +113,7 @@ NEŠLO MI TO! (Tento řádek měl být odsazený, ale bohužel se mi to nedařil
             </p>
             <p><em>Z technických důvodů nefungují v ediorech v této aplikaci lokální obrázky. Externí fungují bez problému</em></p>
 
-            <h5>Máme první článek!</h5>
+            <h5 id="faprvni">Máme první článek!</h5>
             <div class="card indigo lighten-1 white-text">
                 <div class="card-content">
                     <p>Nyní si zkuste podle zadání vytvořit stránku se dvěma články</p>
