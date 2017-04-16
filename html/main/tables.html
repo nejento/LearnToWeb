@@ -1,10 +1,18 @@
 <template class="template">
     <section id="tables-section" class="section" breadcrumb="HTML > Tabulky, seznamy">
-        <div class="top-nav indigo indigo-text text-lighten-5">Tabulky, seznamy</div>
+        <ul id="dropdowntables" class="dropdown-content">
+            <li><a onclick="scroll('#tabne')">Nečíslovaný seznam</a></li>
+            <li><a onclick="scroll('#tabjo')">Číslovaný seznam</a></li>
+            <li><a onclick="scroll('#tabtab')">Tabulka</a></li>
+        </ul>
+        <div class="top-nav indigo indigo-text text-lighten-5">
+            Tabulky, seznamy
+            <a class="dropdown-button right white-text" style="cursor:pointer" data-activates="dropdowntables" data-constrainWidth="false" data-beloworigin="true"><i class="material-icons">menu</i></a></div>
+        </div>
         <div class="contentpage">
             <p class="caption">Pojďme vytvořit nějaký seznam a tabulky. Nejde o složitou záležitost a využití v praxi je neomezené.</p>
 
-            <h4>Nečíslovaný seznam</h4>
+            <h4 id="tabne">Nečíslovaný seznam</h4>
             <p class="caption">Základním seznamem, je seznam nečíslovaný, který položky pod sebou označeny tečkou.</p>
             <p>K tomu slouží tagy <code>&lt;ul&gt;&lt;/ul&gt;</code> (jako unordered list), které vytvoří seznam a <code>&lt;li&gt;&lt;/li&gt;</code>, které vytváří jednotlivé položky.<br/>
             K vložení podseznamu, nebo vytvoření podpoložky, vytvořte v seznamu další seznam.. Podívejte se na příklad, kde všechno pochopíte.</p>
@@ -34,7 +42,7 @@
                 </div>
             </div>
 
-            <h4>Číslovaný seznam</h4>
+            <h4 id="tabjo">Číslovaný seznam</h4>
             <p class="caption">Číslovaný seznam se vytvoří podobným způsobem jako nečíslovaný.</p>
             <p>Použijte tagy <code>&lt;ol&gt;&lt;/ol&gt;</code> (jako ordered list) a pro vytvoření položek opět <code>&lt;li&gt;&lt;/li&gt;</code>.<br/>
             U číslovaného seznamu máš navíc možnost zvolit si typ číslování. Přidáním atributu do tagu <code>&lt;ol type="A"&gt;&lt;/ol&gt;</code> vytvoříš seznam, kde místo čísel bude použito A, B, C, …</p>
@@ -81,7 +89,7 @@
                 </div>
             </div>
 
-            <h4>Tabulky</h4>
+            <h4 id="tabtab">Tabulky</h4>
             <p class="caption">Tabulky oproti seznamům vyžadují trochu více kódů a trochu více tagů. Ve výsledku ovšem mohou uživateli poskytnout daleko více relevantních informací.</p>
             <p>Tabulku vytvoříme pomocí <code>&lt;table&gt;&lt;/table&gt;</code> tagů. Řádky v tabulce poté vytvářeme pomocí <code>&lt;tr&gt;&lt;/tr&gt;</code> (table row) tagů.<br/>
             Nadpisy v tabulkách vytvoříme pomocí <code>&lt;th&gt;&lt;/th&gt;</code> (table header) tagů. Text v těchto buňkách bude napsaný tučně. Tagy <code>&lt;td&gt;&lt;/td&gt;</code> (table data) poté vytvoří klasické buňky s textem.</p>
@@ -107,6 +115,62 @@
                 <div class="col s1"><i class="material-icons" style="font-size:3em">arrow_forward</i></div>
                 <div class="col s7"><img src="main/imgs/tabulka.png"/></div>
             </div>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Vyzkoušej si to. Zkus z následujícího seznamu vytvořit tabulku.</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmltab3">HTML</a></li>
+                        <li class="tab"><a href="#resulttab3" data-result="tables1">Výsledek</a></li>
+                        <li class="tab"><a href="#soltab3">Řešení</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmltab3">
+                                <textarea id="code" class="code-html" data-codename="tables1" data-filename="index.html">
+<ul>
+  <li>Jan Novák</li>
+  <ul>
+    <li>42 let</li>
+    <li>2 děti</li>
+  </ul>
+  <li>Irena Malá</li>
+  <ul>
+    <li>38 let</li>
+    <li>1 dítě</li>
+  </ul>
+</ul></textarea>
+                    </div>
+                    <div id="resulttab3">
+                        <iframe class="display tables1" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                    <div id="soltab3">
+                                <textarea id="code" class="code-html" data-codename="tablessolution1" data-filename="solution.html" data-readonly="true">
+<table>
+  <tr>
+    <th>Jméno</th>
+    <th>Příjmení</th>
+    <th>Věk</th>
+    <th>Počet dětí</th>
+  </tr>
+  <tr>
+    <td>Jan</td>
+    <td>Novák</td>
+    <td>42</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Irena</td>
+    <td>Malá</td>
+    <td>38</td>
+    <td>1</td>
+  </tr>
+</table></textarea>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 </template>
