@@ -91,6 +91,80 @@ NEŠLO MI TO! (Tento řádek měl být odsazený, ale bohužel se mi to nedařil
             <div class="card-panel indigo accent-2">
                 <span class="white-text"><strong>TIP:</strong> Lze použít i tagy <code>&lt;strong&gt;tučně zdůrazněné&lt;/strong&gt;</code> a <code>&lt;em&gt;zdůrazněné kurzívou&lt;/em&gt;</code>. Oba tyto tagy se v prohlížečích zobrazí stejně, rozdíl je v typu významu, kdy <code>&lt;b&gt;</code> a <code>&lt;i&gt;</code> znamenají jen tučný text nebo text kurzívou ale <code>&lt;strong&gt;</code> a <code>&lt;em&gt;</code> text zdůrazňují. Toto může hrát význam u různých čteček, nebo u funkcí usnadnění přístupu, například u předčítání.</span>
             </div>
+
+            <h5>Obrázek</h5>
+            <p class="caption">Web bez obrázku by byla jen nudná hromada textu. Vložení obrázku není nic obtížného.</p>
+            <img src="main/imgs/soubory.png" height="100" width="117"/>
+            <p>Ulož obrázek do stejné složky hned vedle html souboru, ve kterém bude obrázek umístěn. Poté přidej do HTML kódu tento tag</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="botton" data-delay="50" data-tooltip="Tag obrázku">&lt;img</span> <span class="tooltipped" data-position="botton" data-delay="50" data-tooltip="Umístění (adresa) obrázku"><span style="color: #a6e22e">src=</span><span style="color: #e6db74">&quot;kvetina.jpg&quot;</span></span> <span class="tooltipped" data-position="botton" data-delay="50" data-tooltip="Popis obrázku"><span style="color: #a6e22e">alt=</span><span style="color: #e6db74">&quot;Květina&quot;</span></span><span style="color: #f92672">/&gt;</span></pre></div>
+            <p>Najeď is myší na jednotlivé části kód pro popisky.</p>
+            <p>Tag <code>&lt;img&gt;</code> patří také mezi nepárové tagy a tudíž není potřeba jej uzavírat.<br/>
+                Adresa obrázku <code>&lt;src=""&gt;</code> odkazuje pomocí relativních odkazů (o těch více v části <a data-section="links">Odkazy</a>), nebo může odkazovat na extetní odkaz. V takovém přpadě musí být adresa včetně <code>http://odkazkopracku.com/obrazek.png</code><br/>
+                Popisek <code>&lt;alt=""&gt;</code> je volitelný, ale doporučuje se jej vždy uvádět. Tento popisek obrázku se zobrazí při najetí myší na obrázek.
+            </p>
+            <p><em>Z technických důvodů nefungují v ediorech v této aplikaci lokální obrázky. Externí fungují bez problému</em></p>
+
+            <h5>Máme první článek!</h5>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Nyní si zkuste podle zadání vytvořit stránku se dvěma články</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#zadfa3">Zadání</a></li>
+                        <li class="tab"><a href="#htmlfa3">HTML</a></li>
+                        <li class="tab"><a href="#resultfa3" data-result="firstarticle3">Výsledek</a></li>
+                        <li class="tab"><a href="#solutionfa3">Řešení</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="zadfa3">
+                        <p>
+                            <ul>
+                                <li class="caption">Vytvoř stránku s nadpisem 1. řádu nadepisující tvůj web</li>
+                                <li class="caption">Vytvoř dva články s nadpisy a nějakým textem</li>
+                                <li class="caption">Články odděl horizontální čarou</li>
+                                <li class="caption">Přidej obrázek z externího zdroje (https://upload.wikimedia.org/wikipedia/commons/b/bc/T_albidum01.jpg)</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div id="htmlfa3">
+                        <textarea id="code" class="code-html" data-codename="firstarticle3" data-filename="index.html">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Moje první stránka</title>
+  </head>
+  <body>
+
+  </body>
+</html></textarea>
+                    </div>
+                    <div id="resultfa3">
+                        <iframe class="display firstarticle3" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                    <div id="solutionfa3">
+                        <textarea id="code" class="code-html" data-codename="firstarticlesolution3" data-filename="solution.html" data-readonly="true">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Moje první stránka</title>
+  </head>
+  <body>
+    <h1>Testovací web</h1>
+    <h2>První článek</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt tristique interdum. Aliquam et velit id dui hendrerit mollis vel sed risus.<br/>
+    Etiam a est sed quam pellentesque scelerisque vel eu sapien.</p>
+    <hr/>
+    <h2>Druhý článek</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt tristique interdum. Aliquam et velit id dui hendrerit mollis vel sed risus.<br/>
+    Etiam a est sed quam pellentesque scelerisque vel eu sapien.</p>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/T_albidum01.jpg" alt="Květina"/>
+  </body>
+</html></textarea>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </template>

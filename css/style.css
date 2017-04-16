@@ -185,6 +185,10 @@ div.main-area section.section.is-shown {
     margin-top: 2.5rem;
 }
 
+.contentpage a {
+    cursor: pointer;
+}
+
 .collapsible-header-disabled {
     display: block;
     cursor: pointer;
