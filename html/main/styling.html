@@ -1,14 +1,157 @@
 <template class="template">
     <section id="styling-section" class="section" breadcrumb="CSS > Stylujeme">
-        <div class="top-nav indigo indigo-text text-lighten-5">Stylujeme</div>
-        <p>Da page
-            1451115461654168451<br>
-            l45455421654651<br>
-            l5421685421564<br>
-            l5415015645648<br>l<br>
-            l4518451<br>
-            54485415461223456l<br>
-            l45542132457489<br>
-            test</p>
+        <ul id="dropdownstyling" class="dropdown-content">
+            <li><a onclick="scroll('#styldivspan')">&lt;div&gt; a &lt;span&gt;</a></li>
+            <li><a onclick="scroll('#stylbox')">Box model</a></li>
+            <li><a onclick="scroll('#stylpseudo')">Pseudo třídy</a></li>
+        </ul>
+        <div class="top-nav indigo indigo-text text-lighten-5">
+            Stylujeme
+            <a class="dropdown-button right white-text" style="cursor:pointer" data-activates="dropdownstyling" data-constrainWidth="false" data-beloworigin="true"><i class="material-icons">menu</i></a></div>
+        </div>
+        <div class="contentpage">
+            <p class="caption">Nyní máme již vše připravené pro to, abychom mohli začít tvořit vzhled našemu webu.</p>
+
+            <h4 id="styldivspan">&lt;div&gt; a &lt;span&gt;</h4>
+            <p class="caption">Neutrální elementy slouží v HTML kódu především k využití v CSS stylování.</p>
+            <p><code>&lt;div&gt;</code> je neutrální <strong>blokový</strong> element, který funguje jako blok. To znamená, že před ním a za ním se obvykle nevyskytuje žádný další text a řádek je na konci zalomen<br/>
+            Tento element si při kódování v CSS nejlépe představ jako blok do kterého skládáš další tagy. Ten poté přesouváš, lepíš ke stranám a různě jej styluješ.</p>
+            <p><code>&lt;span&gt;</code> je neutrální <strong>řádkový</strong> element, který funguje přímo v řádku. Nejčastěji se používá v celých textech, jako nástroj ke stylování jednotlivých slov nebo vět.</p>
+
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlstyle">HTML</a></li>
+                        <li class="tab"><a href="#cssstyle">CSS</a></li>
+                        <li class="tab"><a href="#resultstyle" data-result="connstyle">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlstyle">
+                            <textarea id="code" class="code-html" data-codename="connstyle" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  Takto se div zobrazuje.<br/>
+  Povšimni si, že jsme nepoužili odsazení řádku a přesto se na další řádek odsadil sám
+
+  <div>Toto je text v divu</div>
+
+  Zkus změnit nějaké nastavení v CSS a s divem pohrát.<br/>
+  Span funguje přímo v textu a <span>nic nikam neodsazuje</span>. Vyzkoušej ho také!
+</body></textarea>
+                    </div>
+                    <div id="cssstyle">
+                            <textarea id="code" class="code-css" data-codename="connstyle" data-filename="style.css">
+div {
+  display: block;
+}
+
+span {
+  color: black;
+}</textarea>
+                    </div>
+                    <div id="resultstyle">
+                        <iframe class="display connstyle" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="stylbox">Box model</h4>
+            <p class="caption">Box model lze nastavit okolo všech elementů.</p>
+            <p>Každý element může mít nastavený svůj rám, mezeru mezi rámem a obsahem samotným a mezeru mezi rámem a jeho okolím.</p>
+            <img src="main/imgs/boxmodel.png" height="158" width="244" style="float:left;margin-right:10px;"/>
+            <p><code>padding</code>: Prostor mezi borderem (okrajem boxu) a samotným obsahem<br/>
+                <code>border</code>: Okraj boxu<br/>
+                <code>margin</code>: Prostor vně boxu<br/>
+                <br/>
+                Velikosti prostorů se zadávají v následujícím pořadí: <code>margin: nahoře vpravo dole vlevo;</code>
+                Příklad: <code>margin: 5px 10px 2px 0;</code> vytvoří vnější odsazení, kdy mezera nahoře bude 5 pixelů velká, vpravo 10 pixelů, dole 2 pixely a vlevo mezera nebude vůbec.
+            </p>
+            <div class="card-panel indigo accent-2">
+                <span class="white-text"><strong>TIP:</strong> Pokud uvedeš jen jednu velikost (<code>margin: 5px;</code>), všechny zbylé strany dostanou stejnou velikost, jako je první. Pokud uvedeš <code>margin: 5px 10px;</code>, aplikují se první dvě velikosti na zbylé strany.</span>
+            </div>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlstyle1">HTML</a></li>
+                        <li class="tab"><a href="#cssstyle1">CSS</a></li>
+                        <li class="tab"><a href="#resultstyle1" data-result="connstyle1">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlstyle1">
+                            <textarea id="code" class="code-html" data-codename="connstyle1" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	Vyzkoušej si okolo <div class="box">mě</div> vytvořit box!
+</body></textarea>
+                    </div>
+                    <div id="cssstyle1">
+                            <textarea id="code" class="code-css" data-codename="connstyle1" data-filename="style.css">
+div {
+  border: 5px solid green;
+  padding: 2px;
+}</textarea>
+                    </div>
+                    <div id="resultstyle1">
+                        <iframe class="display connstyle1" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="stylpseudo">Pseudo třídy</h4>
+            <p class="caption">Pseudo třídy slouží k vytvoření stylu pro speciální stavy. Například, když na odkaz najedeš myší.</p>
+            <p>Nejčastější a nejpraktičtější využití čtyř pseudo tříd je u odkazů, kdy lze vytvořit speciální styly pro nenavštívené odkazy, navštívené odkazy, pro odkazy nad kterými je myš, nebo když se na ně zrovna kliká.<br/>
+            Vyzkoušej si je na následujícím příkladu</p>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlstyle2">HTML</a></li>
+                        <li class="tab"><a href="#cssstyle2">CSS</a></li>
+                        <li class="tab"><a href="#resultstyle2" data-result="connstyle2">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlstyle2">
+                            <textarea id="code" class="code-html" data-codename="connstyle2" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<a href="http://google.com">Já jsem odkaz</a>
+</body></textarea>
+                    </div>
+                    <div id="cssstyle2">
+                            <textarea id="code" class="code-css" data-codename="connstyle2" data-filename="style.css">
+a {padding: 10px; color: white;}
+
+/* Nenavštívený odkaz */
+a:link {background-color: green;}
+
+/* Navštívený odkaz */
+a:visited {background-color: darkgreen;}
+
+/* Najetí myší na odkaz */
+a:hover {background-color: orange;}
+
+/* Kliknutí na odkaz */
+a:active {background-color: blue;}</textarea>
+                    </div>
+                    <div id="resultstyle2">
+                        <iframe class="display connstyle2" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card-panel red darken-4">
+                <span class="white-text">Pro správné fungování MUSÍ být zachováno uvedené pořadí! <code>a:hover</code> musí být POD <code>a:link</code> a <code>a:visited</code> spolu s <code>a:active</code> POD <code>a:hover</code></span>
+            </div>
+
+
+        </div>
+
     </section>
 </template>
