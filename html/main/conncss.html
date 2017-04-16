@@ -1,14 +1,175 @@
 <template class="template">
     <section id="conncss-section" class="section" breadcrumb="CSS > Připojení CSS">
         <div class="top-nav indigo indigo-text text-lighten-5">Připojení CSS</div>
-        <p>Da page
-            1451115461654168451<br>
-            l45455421654651<br>
-            l5421685421564<br>
-            l5415015645648<br>l<br>
-            l4518451<br>
-            54485415461223456l<br>
-            l45542132457489<br>
-            test</p>
+        <div class="contentpage">
+            <p class="caption">Jelikož chceme, aby náš web nějak vypadal a nebyl jen černobílým textem, je nutné použít CSS.</p>
+            <p>CSS (Cascade Style Sheet, v překladu Tabulka kaskádových stylů) je seznam pravidel pro jednotlivé třídy, id a elementy HTML dokumentu, díky kterým HTML dokument získává svůj vzhled.</p>
+
+            <h4>Připojení stylů k dokumentu</h4>
+            <p>Styly je možné k HTML dokumentu aplikovat třemi způsoby, přičemž každý z nich má odlišnou prioritu při výsledném aplikování, jelikož je možné použit všechny typy připojení najednou.</p>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Styl přiřadíme přímo k danému elementu (nejvyšší priorita)</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlconn1">HTML</a></li>
+                        <li class="tab"><a href="#resultconn1" data-result="conncss">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlconn1">
+                            <textarea id="code" class="code-html" data-codename="conncss" data-filename="index.html">
+<body style="background-color:blue">
+	<p style="color:orange;">Tento odstavec bude oranžový na stránce s modrým pozazím</p>
+</body></textarea>
+                    </div>
+                    <div id="resultconn1">
+                        <iframe class="display conncss" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Styl přiřadíme do hlavičky dokumentu v CSS syntaxi (střední priorita)</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlconn2">HTML</a></li>
+                        <li class="tab"><a href="#resultconn2" data-result="conncss2">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlconn2">
+                            <textarea id="code" class="code-html" data-codename="conncss2" data-filename="index.html">
+<head>
+  <style>
+    body {background-color:yellow;}
+    p {color:red}
+  </style>
+</head>
+<body>
+  <p>Tento odstavec by měl být červeně napsaný na žlutém pozadí</p>
+</body></textarea>
+                    </div>
+                    <div id="resultconn2">
+                        <iframe class="display conncss2" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Styl přiřadíme do externího CSS dokumentu, který poté připojíme v hlavičce HTML dokumentu (nízká priorita)</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlconn3">HTML</a></li>
+                        <li class="tab"><a href="#cssconn3">CSS</a></li>
+                        <li class="tab"><a href="#resultconn3" data-result="conncss3">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlconn3">
+                            <textarea id="code" class="code-html" data-codename="conncss3" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <p>Tento odstavec by měl být zelený na černém pozadí</p>
+</body></textarea>
+                    </div>
+                    <div id="cssconn3">
+                            <textarea id="code" class="code-css" data-codename="conncss3" data-filename="style.css">
+body {
+ 	background-color: black;
+}
+
+p {
+	color: green;
+}</textarea>
+                    </div>
+                    <div id="resultconn3">
+                        <iframe class="display conncss3" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card-panel indigo accent-2">
+                <span class="white-text"><strong>TIP:</strong> Využití externího CSS dokumentu je výhodné, pokud web má více stránek, které tak dostanou stejný vzhled.</span>
+            </div>
+
+            <h4>Selectory</h4>
+            <p class="caption">K tomu, abychom mohli CSS styl nějakým používat, je potřeba rozlišit, kterých elementů se mají CSS pravidla týkat</p>
+            <p>K tomu slouží tzv. selectory. Existují tři druhy selectorů: <em>id</em>, <em>class</em> a samotný <em>HTML element</em>. Elementy přiřazujeme přímo do jednotlivých HTML tagů</p>
+
+            <h5>ID</h5>
+            <p>ID se smí v celém HTML dokumentu vyskytnout pouze jednou</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nadpis 1. úrovně">&lt;h1</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jedinečné ID"><span style="color: #a6e22e">id=</span><span style="color: #e6db74">&quot;jménoID&quot;</span></span><span style="color: #f92672">&gt;</span>Nadpis<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/h1&gt;</span></pre></div>
+            <p>Takové ID poté v CSS souboru můžeme vybrat tímto způsobem:</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="ID selector">#jmenoID</span> <span style="color: #f8f8f2">{</span>
+  <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Barva textu"><span style="color: #66d9ef">color</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">#fff;</span></span>
+<span style="color: #f8f8f2">}</span></pre></div>
+
+            <h5>Class</h5>
+            <p>Class (třídy) se mohou vyskytovat v dokumentu neomezeně mnohokrát a to dokonce i v různých tazích. Jedna třída tak může být aplikována například na odkazy, odstavce nebo neutrální řádkové elementy</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Odkaz">&lt;a</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Class (třída) elementu"><span style="color: #a6e22e">class=</span><span style="color: #e6db74">&quot;jmenoTridy&quot;</span></span><span style="color: #f92672">&gt;</span>Odkaz<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/a&gt;</span></pre></div>
+            <p>Třídy se poté v CSS souborech vybírají tímto způsobem</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Class selector">.jmenoTridy</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Dekorace textu – Podtržení">text-decoration</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">underline</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span></pre></div>
+
+            <h5>Element</h5>
+            <p>Stylovat lze i všechny tagy i přesto, že nemají ID ani Class. Například pokud chceme zvýraznit všechny nadpisy druhé úrovně, použijeme tento selector:</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Selector všech <h2> tagů">h2</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Pozadí">background</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">yellow;</span>
+<span style="color: #f8f8f2">}</span></pre></div>
+
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Zkus si sám přidat vlastní tagy s vlastními třídami a ty poté pomocí připojeného CSS dokumentu upravit.</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlconn4">HTML</a></li>
+                        <li class="tab"><a href="#cssconn4">CSS</a></li>
+                        <li class="tab"><a href="#resultconn4" data-result="conncss4">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlconn4">
+                            <textarea id="code" class="code-html" data-codename="conncss4" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <h1 id="oblibeny">Můj oblíbený nadpis</h1>
+  <p><span class="pozor">Všechno</span> důležité <span class="pozor">bude</span> rudé!</p>
+
+  <h1>Proč?</h1>
+  <p>Protože jsem tak co? Protože jsem tak <span class="pozor">řekl.</span></p>
+</body></textarea>
+                    </div>
+                    <div id="cssconn4">
+                            <textarea id="code" class="code-css" data-codename="conncss4" data-filename="style.css">
+body {background-color: #78909c}
+
+p {color: white}
+
+#oblibeny {
+  color: pink;
+}
+
+.pozor {
+  color: red;
+  background: yellow;
+}</textarea>
+                    </div>
+                    <div id="resultconn4">
+                        <iframe class="display conncss4" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!--  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip=""  -->
+        </div>
     </section>
 </template>
