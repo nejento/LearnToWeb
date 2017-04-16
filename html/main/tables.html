@@ -1,14 +1,86 @@
 <template class="template">
     <section id="tables-section" class="section" breadcrumb="HTML > Tabulky, seznamy">
         <div class="top-nav indigo indigo-text text-lighten-5">Tabulky, seznamy</div>
-        <p>Da page
-            1451115461654168451<br>
-            l45455421654651<br>
-            l5421685421564<br>
-            l5415015645648<br>l<br>
-            l4518451<br>
-            54485415461223456l<br>
-            l45542132457489<br>
-            test</p>
+        <div class="contentpage">
+            <p class="caption">Pojďme vytvořit nějaký seznam a tabulky. Nejde o složitou záležitost a využití v praxi je neomezené.</p>
+
+            <h4>Nečíslovaný seznam</h4>
+            <p class="caption">Základním seznamem, je seznam nečíslovaný, který položky pod sebou označeny tečkou.</p>
+            <p>K tomu slouží tagy <code>&lt;ul&gt;&lt;/ul&gt;</code> (jako unordered list), které vytvoří seznam a <code>&lt;li&gt;&lt;/li&gt;</code>, které vytváří jednotlivé položky.<br/>
+            K vložení podseznamu, nebo vytvoření podpoložky, vytvořte v seznamu další seznam.. Podívejte se na příklad, kde všechno pochopíte.</p>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmltab1">HTML</a></li>
+                        <li class="tab"><a href="#resulttab1" data-result="tables">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmltab1">
+                                <textarea id="code" class="code-html" data-codename="tables" data-filename="index.html">
+<ul>
+  <li>Káva</li>
+  <li>Mléko</li>
+  <ul>
+    <li>Polotučné</li>
+    <li>Plnotučné</li>
+  </ul>
+  <li>Čaj</li>
+</ul></textarea>
+                    </div>
+                    <div id="resulttab1">
+                        <iframe class="display tables" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Číslovaný seznam</h4>
+            <p class="caption">Číslovaný seznam se vytvoří podobným způsobem jako nečíslovaný.</p>
+            <p>Použijte tagy <code>&lt;ol&gt;&lt;/ol&gt;</code> (jako ordered list) a pro vytvoření položek opět <code>&lt;li&gt;&lt;/li&gt;</code>.<br/>
+            U číslovaného seznamu máš navíc možnost zvolit si typ číslování. Přidáním atributu do tagu <code>&lt;ol type="A"&gt;&lt;/ol&gt;</code> vytvoříš seznam, kde místo čísel bude použito A, B, C, …</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="1, 2, 3"><span style="color: #f92672">&lt;ol</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;1&quot;</span><span style="color: #f92672">&gt;</span></span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="A, B, C"><span style="color: #f92672">&lt;ol</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;A&quot;</span><span style="color: #f92672">&gt;</span></span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="a, b, c"><span style="color: #f92672">&lt;ol</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;a&quot;</span><span style="color: #f92672">&gt;</span></span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="I, II, III"><span style="color: #f92672">&lt;ol</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;I&quot;</span><span style="color: #f92672">&gt;</span></span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="i, ii, iii"><span style="color: #f92672">&lt;ol</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;i&quot;</span><span style="color: #f92672">&gt;</span></span></pre></div>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Vyzkoušej si to. Zkus z následujícího nečíslovaného seznamu vytvořit slohovou osnovu.</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmltab2">HTML</a></li>
+                        <li class="tab"><a href="#resulttab2" data-result="tables">Výsledek</a></li>
+                        <li class="tab"><a href="#soltab2">Řešení</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmltab2">
+                                <textarea id="code" class="code-html" data-codename="tables" data-filename="index.html">
+<ul>
+  <li>Úvod</li>
+  <li>Stať</li>
+  <ul>
+    <li>Charakteristika</li>
+    <li>Prostředí</li>
+  </ul>
+  <li>Závěr</li>
+</ul></textarea>
+                    </div>
+                    <div id="resulttab2">
+                        <iframe class="display tables" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                    <div id="soltab2">
+                                <textarea id="code" class="code-html" data-codename="tablessolution" data-filename="solution.html" data-readonly="true">
+<ol>
+  <li>Úvod</li>
+  <li>Stať</li>
+  <ol type="A">
+    <li>Charakteristika</li>
+    <li>Prostředí</li>
+  </ol>
+  <li>Závěr</li>
+</ol></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 </template>
