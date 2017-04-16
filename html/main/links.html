@@ -1,14 +1,48 @@
 <template class="template">
     <section id="links-section" class="section" breadcrumb="HTML > Odkazy">
         <div class="top-nav indigo indigo-text text-lighten-5">Odkazy</div>
-        <p>Da page
-            1451115461654168451<br>
-            l45455421654651<br>
-            l5421685421564<br>
-            l5415015645648<br>l<br>
-            l4518451<br>
-            54485415461223456l<br>
-            l45542132457489<br>
-            test</p>
+        <div class="contentpage">
+            <img src="main/imgs/potapec.png" width="249" height="220" style="float:right"/>
+            <p class="caption">Funkce odkazů je v případě HTML velice důležitou součástí. Již z názvu HTML je jasné, že textu dodává schopnost navíc a tou je právě propojení s dalšími stránkami</p>
+            <p>Odkazy dělíme na dva druhy. Buď na <strong>absolutní</strong>, kdy cestou k souboru je jasně daná adresa od začátku až do konce, například <em>https://google.com</em> nebo <em>C:/Users/Jaromír/Desktop</em><br/>
+            Druhým odkazem je takzvaný <strong>relativní</strong> odkaz, kdy se pohybujeme ve složkách z místa, kde se právě nacházíme, nebo v jakém je aktuální soubor uložen, například <em>../index.html</em></p>
+
+            <h4>Relativní odkazy (potápěc)</h4>
+            <p class="caption">Relativní odkazy jsou užitečné pro pohyb v blízkém okolí. Pokud bude celý web nebo aplikace v různých umístěních, absolutní cesty by odkazovaly na stále stejné místo a obrázky by se tak nezobrazily.</p>
+            <div class="row">
+                <div class="col s9">
+                    <p>Představte si, že jste potápěč, který stoupá a klesá ze složek a zase do složek.</p>
+                    <p>Jsem soubor <em>index.html</em> ve složce <em>html</em> (<code>./web/html/index.html</code>) a potřebuji zobrazit obrázek, který se nachází ve složce <em>imgs</em> (<code>./web/imgs/obrazek.jpg</code>)</p>
+                    <p>Nejprve se musím „vynořit“ do nadřazené složky</p>
+                </div>
+                <div class="col s3"><img src="main/imgs/odkaz1.png" height="150" width="195"/></div>
+            </div>
+
+
+            <h5>Vynoření</h5>
+            <div class="row">
+                <div class="col s9">
+                    <p>Ze složky se vynoříme použitím dvou teček v adrese odkazu: <code>../</code><br/>
+                    Tímto způsobem se dostávám do složky, která byla nadřazená původnímu umístění.</p>
+                    <p>V našem příkladu jsme se tak dostali do složky <code>./web/</code> a v adrese tak máme zatím napsáno <code>../</code></p>
+                </div>
+                <div class="col s3"><img src="main/imgs/odkaz2.png" height="150" width="180"/></div>
+            </div>
+
+            <h5>Zanoření</h5>
+            <div class="row">
+                <div class="col s9">
+                    <p>Do složky se zanoříme napsáním názvu složky: <code>imgs/</code></p>
+                    <p>V našem příkladu jsme se tak dostali do složky <code>./web/imgs</code> a v adrese tak máme napsáno <code>../imgs</code><br/>
+                    Nyní již můžeme už jen napsat název souboru s obrázkem. Soubor <em>index.html</em> tak nyní ukáže obrázek na adrese <code>./web/imgs/obrazek.jpg</code> a v soubotu index.html najdeme v adrese obrázku napsanou adresu <code>../imgs/obrazek.jpg</code></p>
+                </div>
+                <div class="col s3"><img src="main/imgs/odkaz3.png" height="150" width="212"/></div>
+            </div>
+            <div class="card-panel indigo accent-2">
+                <span class="white-text"><strong>TIP:</strong> Pokud odkazuješ na soubor, který je ve stejné složce, můžeš pro přehlednost napsat adresu <code>./fotka.jpg</code>. <code>./</code> značí aktuální složku, avšak je možné toto vynechat a napsat tak rovnou adresu <code>fotka.jpg</code></span>
+            </div>
+
+            <h4></h4>
+        </div>
     </section>
 </template>
