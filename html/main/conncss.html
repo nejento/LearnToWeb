@@ -1,11 +1,25 @@
 <template class="template">
     <section id="conncss-section" class="section" breadcrumb="CSS > Připojení CSS">
-        <div class="top-nav indigo indigo-text text-lighten-5">Připojení CSS</div>
+        <ul id="dropdownconncss" class="dropdown-content">
+            <li><a onclick="scroll('#connconn')">Připojení stylů k dokumentu</a></li>
+            <li><a onclick="scroll('#connsel')">Selectory</a></li>
+            <li><a onclick="scroll('#connid')">ID</a></li>
+            <li><a onclick="scroll('#connclass')">Class</a></li>
+            <li><a onclick="scroll('#connelem')">Elementy</a></li>
+            <li><a onclick="scroll('#connkomb')">Kombinace selectorů</a></li>
+            <li><a onclick="scroll('#connupre')">Upřesnění</a></li>
+            <li><a onclick="scroll('#connpri')">Přidružení</a></li>
+            <li><a onclick="scroll('#connsdru')">Sdružení</a></li>
+        </ul>
+        <div class="top-nav indigo indigo-text text-lighten-5">
+            Připojení CSS
+            <a class="dropdown-button right white-text" style="cursor:pointer" data-activates="dropdownconncss" data-constrainWidth="false" data-beloworigin="true"><i class="material-icons">menu</i></a></div>
+        </div>
         <div class="contentpage">
             <p class="caption">Jelikož chceme, aby náš web nějak vypadal a nebyl jen černobílým textem, je nutné použít CSS.</p>
             <p>CSS (Cascade Style Sheet, v překladu Tabulka kaskádových stylů) je seznam pravidel pro jednotlivé třídy, id a elementy HTML dokumentu, díky kterým HTML dokument získává svůj vzhled.</p>
 
-            <h4>Připojení stylů k dokumentu</h4>
+            <h4 id="connconn">Připojení stylů k dokumentu</h4>
             <p>Styly je možné k HTML dokumentu aplikovat třemi způsoby, přičemž každý z nich má odlišnou prioritu při výsledném aplikování, jelikož je možné použit všechny typy připojení najednou.</p>
             <div class="card indigo lighten-1 white-text">
                 <div class="card-content">
@@ -97,11 +111,11 @@ p {
                 <span class="white-text"><strong>TIP:</strong> Využití externího CSS dokumentu je výhodné, pokud web má více stránek, které tak dostanou stejný vzhled.</span>
             </div>
 
-            <h4>Selectory</h4>
+            <h4 id="connsel">Selectory</h4>
             <p class="caption">K tomu, abychom mohli CSS styl nějakým používat, je potřeba rozlišit, kterých elementů se mají CSS pravidla týkat</p>
             <p>K tomu slouží tzv. selectory. Existují tři druhy selectorů: <em>id</em>, <em>class</em> a samotný <em>HTML element</em>. Elementy přiřazujeme přímo do jednotlivých HTML tagů</p>
 
-            <h5>ID</h5>
+            <h5 id="connid">ID</h5>
             <p>ID se smí v celém HTML dokumentu vyskytnout pouze jednou</p>
             <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nadpis 1. úrovně">&lt;h1</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jedinečné ID"><span style="color: #a6e22e">id=</span><span style="color: #e6db74">&quot;jménoID&quot;</span></span><span style="color: #f92672">&gt;</span>Nadpis<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/h1&gt;</span></pre></div>
             <p>Takové ID poté v CSS souboru můžeme vybrat tímto způsobem:</p>
@@ -109,7 +123,7 @@ p {
   <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Barva textu"><span style="color: #66d9ef">color</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">#fff;</span></span>
 <span style="color: #f8f8f2">}</span></pre></div>
 
-            <h5>Class</h5>
+            <h5 id="connclass">Class</h5>
             <p>Class (třídy) se mohou vyskytovat v dokumentu neomezeně mnohokrát a to dokonce i v různých tazích. Jedna třída tak může být aplikována například na odkazy, odstavce nebo neutrální řádkové elementy</p>
             <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Odkaz">&lt;a</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Class (třída) elementu"><span style="color: #a6e22e">class=</span><span style="color: #e6db74">&quot;jmenoTridy&quot;</span></span><span style="color: #f92672">&gt;</span>Odkaz<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací tag">&lt;/a&gt;</span></pre></div>
             <p>Třídy se poté v CSS souborech vybírají tímto způsobem</p>
@@ -117,7 +131,7 @@ p {
   <span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Dekorace textu – Podtržení">text-decoration</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">underline</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">}</span></pre></div>
 
-            <h5>Element</h5>
+            <h5 id="connelem">Element</h5>
             <p>Stylovat lze i všechny tagy i přesto, že nemají ID ani Class. Například pokud chceme zvýraznit všechny nadpisy druhé úrovně, použijeme tento selector:</p>
             <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Selector všech <h2> tagů">h2</span> <span style="color: #f8f8f2">{</span>
   <span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Pozadí">background</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">yellow;</span>
@@ -168,6 +182,117 @@ p {color: white}
                     </div>
                 </div>
             </div>
+
+            <h4 id="connkomb">Kombinace selectorů</h4>
+            <p class="caption">Selectory je možné kombinovat a vybírat tak opravdu jen ty tagy, které chcete upravit.</p>
+
+            <h5 id="connupre">Upřesnění</h5>
+            <p>Spojením dvou selectorů dojde k aplikování stylu pouze na ty tagy, které splňují podmínky. V tomto příkladu budou vybrány pouze <code>&lt;span&gt;</code> tagy, které zároveň obsahují <code>class="sleva"</code>. Vybrán bude tedy <code>&lt;span class="sleva"&gt;48 Kč&lt;/span&gt;</code></p>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlconn5">HTML</a></li>
+                        <li class="tab"><a href="#cssconn5">CSS</a></li>
+                        <li class="tab"><a href="#resultconn5" data-result="conncss5">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlconn5">
+                            <textarea id="code" class="code-html" data-codename="conncss5" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <p>I přesto, že tento <a class="sleva">odkaz</a> má class="sleva",<br/>
+  Červené pozadí dostane tento <span class="sleva">span</span><br/>
+  Protože jen ten splňuje podmínku.</p>
+</body></textarea>
+                    </div>
+                    <div id="cssconn5">
+                            <textarea id="code" class="code-css" data-codename="conncss5" data-filename="style.css">
+span.sleva {
+  background: red;
+}</textarea>
+                    </div>
+                    <div id="resultconn5">
+                        <iframe class="display conncss5" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <h5 id="connpri">Přidružení</h5>
+            <p>Rozdělením dvou selectorů mezerou dojde k aplikování stylu pouze na ty tagy, které splňují druhý selector a zároveň se nachází uvnitř tagů splňující první selector. Podívej se na příklad.</p>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlconn6">HTML</a></li>
+                        <li class="tab"><a href="#cssconn6">CSS</a></li>
+                        <li class="tab"><a href="#resultconn6" data-result="conncss6">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlconn6">
+                            <textarea id="code" class="code-html" data-codename="conncss6" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <p id="praha">Tento <a>odkaz</a> v tomto odstavci bude červený.
+  Protože tento odstavec MÁ id="praha".</p>
+
+  <p>Kdežto tento <a>odkaz</a> zůstane výchozím odkazem
+  Tento odstavec totiž NEMÁ id="praha"<p>
+</body></textarea>
+                    </div>
+                    <div id="cssconn6">
+                            <textarea id="code" class="code-css" data-codename="conncss6" data-filename="style.css">
+#praha a {
+  color: red;
+}</textarea>
+                    </div>
+                    <div id="resultconn6">
+                        <iframe class="display conncss6" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <h5 id="connsdru">Sdružení</h5>
+            <p>Jednotlivá CSS pravidla lze aplikovat na několik selectorů. Stačí jednotlivé selectory oddělit čárkou</p>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlconn7">HTML</a></li>
+                        <li class="tab"><a href="#cssconn7">CSS</a></li>
+                        <li class="tab"><a href="#resultconn7" data-result="conncss6">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlconn7">
+                            <textarea id="code" class="code-html" data-codename="conncss7" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <p>Všechny <span class="grass">spany</span> a odkazy s class="grass" budou zelené</p>
+  <p>Například tento <a class="grass">odkaz</a> bude zelený.<br/>
+  Tento <a>odkaz</a> a tento <span>span</span> už ale ne.<p>
+
+  <p>Cokoliv jiného s class="grass" zelené nebude, jelikož to nesplňuje selector.<br/></p>
+  <h1 class="grass">Tento nadpis zelený nebude</h1>
+</body></textarea>
+                    </div>
+                    <div id="cssconn7">
+                            <textarea id="code" class="code-css" data-codename="conncss7" data-filename="style.css">
+a.grass, span.grass {
+  color: green;
+}</textarea>
+                    </div>
+                    <div id="resultconn7">
+                        <iframe class="display conncss7" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+
 
             <!--  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip=""  -->
         </div>
