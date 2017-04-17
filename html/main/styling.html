@@ -4,6 +4,9 @@
             <li><a onclick="scroll('#styldivspan')">&lt;div&gt; a &lt;span&gt;</a></li>
             <li><a onclick="scroll('#stylbox')">Box model</a></li>
             <li><a onclick="scroll('#stylpseudo')">Pseudo třídy</a></li>
+            <li><a onclick="scroll('#stylsome')">Některá CSS pravidla</a></li>
+            <li><a onclick="scroll('#styltext')">Text</a></li>
+            <li><a onclick="scroll('#stylborder')">Bordery</a></li>
         </ul>
         <div class="top-nav indigo indigo-text text-lighten-5">
             Stylujeme
@@ -150,8 +153,111 @@ a:active {background-color: blue;}</textarea>
                 <span class="white-text">Pro správné fungování MUSÍ být zachováno uvedené pořadí! <code>a:hover</code> musí být POD <code>a:link</code> a <code>a:visited</code> spolu s <code>a:active</code> POD <code>a:hover</code></span>
             </div>
 
+            <h4 id="stylsome">Některá CSS pravidla</h4>
+            <p class="caption">Pomocí CSS lze nastavit prakticky každý záhyb na webu. Zde jsou některá pravidla pro stylování.</p>
+            <p>Pro zobrazení popisů, najeď na jednotlivá pravidla.</p>
+            <h5 id="styltext">Text</h5>
+            <div class="row">
+                <div class="col s4">
+                    <strong>Barva písma</strong>
+                    <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Odstavec">p</span> <span style="color: #f8f8f2">{</span>
+  <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Barva textu"><span style="color: #66d9ef">color</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">red;</span></span>
+<span style="color: #f8f8f2">}</span></pre></div>
+                </div>
+                <div class="col s4">
+                    <strong>Zarovnání</strong>
+                    <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nadpis 1. úrovně">h1</span> <span style="color: #f8f8f2">{</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zarovnání textu na střed"><span style="color: #66d9ef">text-align</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">center</span></span><span style="color: #f8f8f2">}</span>
+
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nadpis 2. úrovně">h2</span> <span style="color: #f8f8f2">{</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zarovnání textu doleva"><span style="color: #66d9ef">text-align</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">left</span></span><span style="color: #f8f8f2">}</span>
+
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nadpis 3. úrovně">h3</span> <span style="color: #f8f8f2">{</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zarovnání textu doprava"><span style="color: #66d9ef">text-align</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">right</span></span><span style="color: #f8f8f2">}</span>
+
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nadpis 4. úrovně">h4</span> <span style="color: #f8f8f2">{</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zarovnání textu do bloku"><span style="color: #66d9ef">text-align</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">justify</span></span><span style="color: #f8f8f2">}</span></pre></div>
+                </div>
+                <div class="col s4">
+                    <strong>Velikost písma</strong>
+                    <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nadpis 1. úrovně">h1</span> <span style="color: #f8f8f2">{</span>
+    <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Velikost písma bude 20px"><span style="color: #66d9ef">font-size</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">20px</span><span style="color: #f8f8f2">;</span></span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Odstavec">p</span> <span style="color: #f8f8f2">{</span>
+    <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="em = Škálovatelná velikost"><span style="color: #66d9ef">font-size</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">1em</span><span style="color: #f8f8f2">;</span></span>
+<span style="color: #f8f8f2">}</span></pre></div>
+                </div>
+            </div>
+            <div class="card-panel indigo accent-2">
+                <span class="white-text"><code>1em</code> odpovídá výchozí velikosti písma prohlížeče, tedy 16px. (Pro přepočet z pixelů na em využij rovnice <code>em = pixly ÷ 16</code>). <code>em</code> se hodí použít například u responzivních webů, kdy jde o přizpůsobení písma pro mobilní prohlížeče</span>
+            </div>
+            <strong>Fonty</strong>
+            <p>Prohlížeč ve výchozím nastavení zná pouze ta písma, která jsou nainstalovaná v operačním systému a to může znamenat problémy, jelikož písma nebudou na všech zařízeních vypadat stejně.</p>
+            <p></p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip='Odstavec s class="serif"'><span style="color: #f92672">p</span><span style="color: #a6e22e">.serif</span></span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #75715e">/* Patkové písmo Times New Roman */</span>
+  <span style="color: #66d9ef">font-family</span><span style="color: #f92672">:</span> <span style="color: #e6db74" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Hlavní název písma">&quot;Times New Roman&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Náhradní název písma">Times</span><span style="color: #f92672">,</span> <span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Typ písma">serif</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip='Odstavec s class="sansserif"'><span style="color: #f92672">p</span><span style="color: #a6e22e">.sansserif</span></span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #75715e">/* Bezpatkové písmo Arial */</span>
+  <span style="color: #66d9ef">font-family</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Hlavní název písma">Arial</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Náhradní písmo">Helvetica</span><span style="color: #f92672">,</span> <span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Typ písma">sans-serif</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+            <div class="card-panel indigo accent-2">
+                <span class="white-text"><strong>TIP:</strong> Zkuste použít službu <a class="teal-text text-accent-1" style="cursor:pointer" onclick="shell.openExternal('https://fonts.google.com')">Google Fonts</a>, která nabízí různá písma pro web. Stačí si vybrat a použít import do <code>&lt;head&gt;&lt;/head&gt;</code> HTML dokumentu a použít pravidlo v CSS.</span>
+            </div>
+
+            <h5 id="stylborder">Bordery</h5>
+            <p>Základní syntaxe pro zápis borderů (okrajů) je tato:</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Všechny <div> budou ovlivněny">div</span> <span style="color: #f8f8f2">{</span><span style="color: #66d9ef">border</span><span style="color: #f92672">:</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Tloušťka borderu">2px</span> <span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Typ borderu">solid</span> <span style="color: #f8f8f2" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Barva borderu">red;}</span></pre></div>
+            <p>Pokud chcete borderu přidat tzv. border radius, neboli zaoblení, funguje syntaxe podobně, jako u box modelů (najeďte si myší na jednotlivé velkosti):</p>
+            <div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Všechny <div> budou ovlivněny">div</span> <span style="color: #f8f8f2">{</span><span style="color: #66d9ef">border-radius</span><span style="color: #f92672">:</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Vlevo nahoře">5px</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Vpravo nahoře">8px</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Vpravo dole">2px</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Vlevo dole">6px</span><span style="color: #f8f8f2">;}</span></pre></div>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlstyle3">HTML</a></li>
+                        <li class="tab"><a href="#cssstyle3">CSS</a></li>
+                        <li class="tab"><a href="#resultstyle3" data-result="connstyle3">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlstyle3">
+                            <textarea id="code" class="code-html" data-codename="connstyle3" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <style>
+    /* 5px mezera uvnitř a 10px pod divem */
+    div {padding: 5px; margin-bottom: 10px}
+  </style>
+</head>
+<body>
+  <div class="box">Mám border na všech stranách</div>
+  <div class="under">Mám spodní border</div>
+  <div class="radius">Mám zaoblený border</div>
+  <div class="info">Mám border tak, že vypadám jako informace</div>
+</body></textarea>
+                    </div>
+                    <div id="cssstyle3">
+                            <textarea id="code" class="code-css" data-codename="connstyle3" data-filename="style.css">
+.box {border: 1px solid black;}
+
+.under {border-bottom: 2px solid #ff6f00;}
+
+.radius {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.info {
+  border-left: 5px solid #0097a7;
+  background-color: #b2ebf2;
+}</textarea>
+                    </div>
+                    <div id="resultstyle3">
+                        <iframe class="display connstyle3" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+            <!--  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip=""  -->
 
         </div>
-
     </section>
 </template>
