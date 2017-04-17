@@ -100,6 +100,19 @@ a:active {color: #0000FF;}`);
                 case "sub":
                     clipboard.writeText(`<sub>dolní index</sub>`);
                     break;
+                case "color":
+                    clipboard.writeText(`color: red;`);
+                    break;
+                case "background":
+                    clipboard.writeText(`background: red;
+background: url(adresa_obrázku);`);
+                    break;
+                case "border":
+                    clipboard.writeText(`border: 2px solid red;`);
+                    break;
+                case "radius":
+                    clipboard.writeText(`border-radius: topright topleft bottomright bottomleft;`);
+                    break;
             }
         }
     </script>
@@ -107,7 +120,6 @@ a:active {color: #0000FF;}`);
     <div id="cheata" class="modal bottom-sheet">
         <div class="modal-content">
             <h4>Odkazy</h4>
-            <!-- border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff -->
             <div class="row valign-wrapper">
                 <div class="col s11"><div class="" style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Odkaz">&lt;a</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Adresa odkazu"><span style="color: #a6e22e">href=</span><span style="color: #e6db74">&quot;http://google.com&quot;</span></span><span style="color: #f92672">&gt;</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zobrazený text">Klikni na mě</span><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací značka">&lt;/a&gt;</span></pre></div></div>
                 <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('a')"><i class="material-icons">content_copy</i></a></div>
@@ -261,11 +273,11 @@ a:active {color: #0000FF;}`);
 <span style="color: #f8f8f2">}</span></pre></div></div>
                 <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('sel')"><i class="material-icons">content_copy</i></a></div>
                 <div class="col s3"><div class="tooltipped" data-position="top" data-delay="50" data-tooltip='<div id="menu">Pozadí tohoto divu bude černé</div>' style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">#menu</span> <span style="color: #f8f8f2">{</span>
-  <span style="color: #66d9ef">background</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">#000</span>
+  <span style="color: #66d9ef">background</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">#000</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">}</span></pre></div></div>
                 <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('selid')"><i class="material-icons">content_copy</i></a></div>
                 <div class="col s3"><div class="tooltipped" data-position="top" data-delay="50" data-tooltip='<span class="sleva">Barva těchto textů bude červená</span>' style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">.sleva</span> <span style="color: #f8f8f2">{</span>
-  <span style="color: #66d9ef">color</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">red</span>
+  <span style="color: #66d9ef">color</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">red;</span>
 <span style="color: #f8f8f2">}</span></pre></div></div>
                 <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('selclass')"><i class="material-icons">content_copy</i></a></div>
             </div>
@@ -319,15 +331,17 @@ a:active {color: #0000FF;}`);
         <div class="modal-content">
             <h4>Bloky</h4>
             <div class="row valign-wrapper">
-                <div class="col s11"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Blokový neutrální element">&lt;div</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Styl divu"><span style="color: #a6e22e">style=</span><span style="color: #e6db74">&quot;color:#ff0000&quot;</span><span style="color: #f92672">&gt;</span></span>
-  <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Obsah divu"><span style="color: #f92672">&lt;h2&gt;</span>Nadpis<span style="color: #f92672">&lt;/h2&gt;</span>
-  <span style="color: #f92672">&lt;p&gt;</span>Paragraf<span style="color: #f92672">&lt;/p&gt;</span></span>
-<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací značka">&lt;/div&gt;</span></pre></div></div>
-                <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('div')"><i class="material-icons">content_copy</i></a></div>
+                <div class="col s5"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Odstavec">p</span> <span style="color: #f8f8f2">{</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Barva textu"><span style="color: #66d9ef">color</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">red;</span>}</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('color')"><i class="material-icons">content_copy</i></a></div>
+                <div class="col s5"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Blokový neutrální element">div</span> <span style="color: #f8f8f2">{</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Barva pozadí"><span style="color: #66d9ef">background</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">red;</span>}</span>
+<span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Tělo stránky">body</span> <span style="color: #f8f8f2">{</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Obrázek pozadí"><span style="color: #66d9ef">background</span><span style="color: #f92672">:</span> <span style="color: #e6db74">url(<span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Relativní nebo absolutní adresa obrázku">adresa_obrázku</span>)</span></span><span style="color: #f8f8f2"><span style="color: #f8f8f2">;</span>}</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('background')"><i class="material-icons">content_copy</i></a></div>
             </div>
             <div class="row valign-wrapper">
-                <div class="col s11"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;p&gt;</span>Toto je <span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Řádkový neutrální element">&lt;span</span> <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="(volitelné) Styl spanu"><span style="color: #a6e22e">style=</span><span style="color: #e6db74">&quot;color:blue;background:yellow&quot;</span></span><span style="color: #f92672">&gt;</span><span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Obsah spanu">zvýrazněný</span><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Uzavírací značka">&lt;/span&gt;</span> text<span style="color: #f92672">&lt;p&gt;</span></pre></div></div>
-                <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('span')"><i class="material-icons">content_copy</i></a></div>
+                <div class="col s5"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Blokový neutrální element">div</span> <span style="color: #f8f8f2">{</span><span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Rám elementu">border</span><span style="color: #f92672">:</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Tloušťka">2px</span> <span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Typ borderu">solid</span> <span style="color: #f8f8f2" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Barva borderu">red;}</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('border')"><i class="material-icons">content_copy</i></a></div>
+                <div class="col s5"><div style="background: #272822; overflow:auto;width:auto;border-radius: 2px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);padding:5px;font-size:1.2em;color:#fff"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Blokový neutrální element">div</span> <span style="color: #f8f8f2">{</span><span style="color: #66d9ef" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zaoblení borderu">border-radius</span><span style="color: #f92672">:</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Levý horní roh">5px</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Pravý horní roh">8px</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Pravý dolní roh">2px</span> <span style="color: #ae81ff" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Levý dolní roh">6px</span><span style="color: #f8f8f2">;}</span></pre></div></div>
+                <div class="col s1"><a class="btn-floating waves-effect waves-light teal tooltipped" data-position="bottom" data-delay="50" data-tooltip="Zkopírovat" onclick="copy('radius')"><i class="material-icons">content_copy</i></a></div>
             </div>
         </div>
     </div>
