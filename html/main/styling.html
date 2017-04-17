@@ -7,6 +7,8 @@
             <li><a onclick="scroll('#stylsome')">Některá CSS pravidla</a></li>
             <li><a onclick="scroll('#styltext')">Text</a></li>
             <li><a onclick="scroll('#stylborder')">Bordery</a></li>
+            <li><a onclick="scroll('#stylpozic')">Pozicování</a></li>
+            <li><a onclick="scroll('#stylcodal')">Co dál?</a></li>
         </ul>
         <div class="top-nav indigo indigo-text text-lighten-5">
             Stylujeme
@@ -202,7 +204,7 @@ a:active {background-color: blue;}</textarea>
 <span style="color: #f8f8f2">}</span>
 </pre></div>
             <div class="card-panel indigo accent-2">
-                <span class="white-text"><strong>TIP:</strong> Zkuste použít službu <a class="teal-text text-accent-1" style="cursor:pointer" onclick="shell.openExternal('https://fonts.google.com')">Google Fonts</a>, která nabízí různá písma pro web. Stačí si vybrat a použít import do <code>&lt;head&gt;&lt;/head&gt;</code> HTML dokumentu a použít pravidlo v CSS.</span>
+                <span class="white-text"><strong>TIP:</strong> Zkuste použít službu <a class="teal-text text-accent-1" style="cursor:pointer" onclick="shell.openExternal('https://fonts.google.com')">Google Fonts</a>, která nabízí různá písma pro web. Stačí si vybrat, použít import do <code>&lt;head&gt;&lt;/head&gt;</code> HTML dokumentu a použít pravidlo v CSS.</span>
             </div>
 
             <h5 id="stylborder">Bordery</h5>
@@ -256,7 +258,131 @@ a:active {background-color: blue;}</textarea>
                     </div>
                 </div>
             </div>
-            <!--  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip=""  -->
+
+            <h5 id="stylpozic">Pozicování</h5>
+            <p>Pozicování slouží k umisťování předmětů na stránce. Existuje několik způsobů, kterým lze předmět na stránku umístit</p>
+            <p>Lze využít čtyř druhů umístění: <code>relative</code>, <code>absolute</code>, <code>fixed</code> a <code>static</code>.<br/>
+                <code>relative</code>: Zobrazuje položky v relativní vzdálenosti od ostatních elementů<br/>
+                <code>absolute</code>: Zobrazuje položky na přesně daném místě v dokumentu<br/>
+                <code>fixed</code>: Zobrazuje položky relativně k oknu prohlížeče. Například způsobí, že horní menu stránky zůstává nahoře viditelné i přesto, že uživatel stránku posunul<br/>
+                <code>static</code>: Výchozí zobrazení položky, které se zobrazuje na daném místě v dokumentu
+            </p>
+            <p>K nastavení pozic v dokumentu poté slouží atributy: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, <code>width</code>, <code>height</code> a <code>float</code><br/>
+                <code>top</code>: Odsazení shora<br/>
+                <code>right</code>: Odsazení zprava<br/>
+                <code>bottom</code>: Odsazení zespodu<br/>
+                <code>left</code>: Odsazení zleva<br/>
+                <code>width</code>: Šířka elementu<br/>
+                <code>height</code>: Výška elementu<br/>
+                <code>float</code>: Umístění elementu v bloku, kdy text bude daný element obtékat. Vhodné použít u obrázků
+            </p>
+
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Vyzkoušej si umístění. Zkus si různě nastavit velikosti divů a jejich umístění.</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlstyle4">HTML</a></li>
+                        <li class="tab"><a href="#cssstyle4">CSS</a></li>
+                        <li class="tab"><a href="#resultstyle4" data-result="connstyle4">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlstyle4">
+                            <textarea id="code" class="code-html" data-codename="connstyle4" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body style=background-color:#b2dfdb>
+  <div class="rel">Jsem relativně umístěný div. Jak vidíš, mohu si zde psát textu<br/>
+    kolik chci, ale absolutního elementa prostě neposunu.
+    <div class="abs">Jsem uvnitř a jsem absolutně umístěný. Moje pozice je<br/>
+    závisí na elementu, v jakém se nacházím.</div>
+  </div>
+  <div class="fix">Jsem zafixovaný k oknu prohlížeče. Scrollovat můžeš jak chceš,<br/>
+  	ale prostě mě neposuneš.
+  </div>
+</body></textarea>
+                    </div>
+                    <div id="cssstyle4">
+                            <textarea id="code" class="code-css" data-codename="connstyle4" data-filename="style.css">
+.rel {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+}
+
+.abs {
+  position: absolute;
+  top: 25px;
+  right: -20px;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+
+.fix {
+  position: fixed;
+  bottom: 0;
+  right: 5px;
+  width: 300px;
+  border: 3px solid #73AD21;
+}</textarea>
+                    </div>
+                    <div id="resultstyle4">
+                        <iframe class="display connstyle4" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card indigo lighten-1 white-text">
+                <div class="card-content">
+                    <p>Vyzkoušej si float.</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#htmlstyle5">HTML</a></li>
+                        <li class="tab"><a href="#cssstyle5">CSS</a></li>
+                        <li class="tab"><a href="#resultstyle5" data-result="connstyle5">Výsledek</a></li>
+                    </ul>
+                </div>
+                <div class="card-content indigo lighten-4 black-text">
+                    <div id="htmlstyle5">
+                            <textarea id="code" class="code-html" data-codename="connstyle5" data-filename="index.html">
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <p>
+    <img class="imgright" src="https://upload.wikimedia.org/wikipedia/commons/b/bc/T_albidum01.jpg" alt="Květina"/>
+  	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    In nec velit vitae ante iaculis placerat nec et neque.
+    Maecenas laoreet augue ac metus gravida, quis lacinia tellus imperdiet.
+    Sed mattis sem vel est aliquet pharetra.
+  </p>
+</body></textarea>
+                    </div>
+                    <div id="cssstyle5">
+                            <textarea id="code" class="code-css" data-codename="connstyle5" data-filename="style.css">
+.imgright {
+  /* Lze nastavit na left nebo right */
+  float: right;
+}</textarea>
+                    </div>
+                    <div id="resultstyle5">
+                        <iframe class="display connstyle5" frameBorder="0" onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="stylcodal">Co dál?</h4>
+            <p class="caption">Nyní již máš základ k tvorbě webů pomocí HTML a CSS. Nyní nezbývá nic jiného, než si to všechno vyzkoušet.</p>
+            <p>Existuje mnoho dalších fukncí, které HTML a CSS nabízí pro to, aby vznikaly jedinečné a dobře vypadající weby, které mají i své funkce. <br/>
+                Díky CSS lze na stránkách vytvářet animace, stínování, 3D animace, průhlednosti. Pomocí standardu HTML5 nové funkce jako přehrávače médií, nebo naopak základní rozložení webů. Interaktivita webu a zpracovávání dat poté lze zařídit pomocí programovacího jazyka PHP a Javascript a nebo jedním z mnoha dalších způsobů.<br/>
+                Když si nebudete vědět rady s různými HTML a CSS problémy, nevzdávejte to. Zkuste si prohledat internet, kde najdete nepřeberné množství návodů a nástrojů pro zjednodušení psaní, nebo předvytvoření kódů.
+            </p>
+            <p class="caption">Hodně štěstí!</p>
 
         </div>
     </section>
