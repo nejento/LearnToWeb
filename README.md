@@ -1,4 +1,4 @@
-# LearnJS
+# LearnToWeb
 
 Maturitní práce z předmětu Informatika a komunikační technologie zaměřená na vývoj programu nebo hry se zaměřením na vzdělávání.
 
@@ -19,7 +19,7 @@ Pro úspěšné spuštění aplikace bez instalátoru společně s upravovateln�
 ### Instalace
 
 0. Otevřete příkazový řádek ve složce, ve které chcete mít development soubory uloženy, pomocí `Shift` + `Right click`
-1. *(Volitelné)* Pokud máte nainstalovaný git-scm, spusťte následující příkaz: ``git clone https://github.com/nejnto/LearnJS && cd LearnJS``
+1. *(Volitelné)* Pokud máte nainstalovaný git-scm, spusťte následující příkaz: ``git clone https://github.com/nejnto/LearnToWeb && cd LearnToWeb``
 2. Spusťte příkaz ``npm install`` pro stažení vyžadovaných knihoven
 3. Spusťte aplikaci příkazem ``npm start``
 
@@ -27,4 +27,4 @@ Veškeré soubory aplikace naleznete ve složce `lib`
 
 ### Hlášení chyb a připomínky
 
-Máte-li připomínky, kontaktujte mě přes E-mailovou adresu, nebo přímo zde na GitHubu v tomto projektu na stránce [Issues](https://github.com/nejento/LearnJS/issues)
+Máte-li připomínky, kontaktujte mě přes E-mailovou adresu, nebo přímo zde na GitHubu v tomto projektu na stránce [Issues](https://github.com/nejento/LearnToWeb/issues)

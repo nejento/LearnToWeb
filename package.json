@@ -1,14 +1,14 @@
 {
-  "name": "LearnJS",
+  "name": "LearnToWeb",
   "version": "1.0.0",
   "description": "Maturitní práce z předmětu Informatika a komunikační technologie zaměřená na vývoj programu nebo hry se zaměřením na vzdělávání",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/nejento/LearnJS",
+  "repository": "https://github.com/nejento/LearnToWeb",
   "keywords": [
-    "LearnJS",
+    "LearnToWeb",
     "javascript",
     "maturita",
     "school-project",

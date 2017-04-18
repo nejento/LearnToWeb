@@ -8,17 +8,17 @@ pipeline {
     }
     stage('Sestavení aplikace') {
       steps {
-        sh 'electron-packager . LearnJS --platform=win32 --icon=favicon.ico'
+        sh 'electron-packager . LearnToWeb --platform=win32 --icon=favicon.ico'
       }
     }
     stage('zip artifact') {
       steps {
-        sh 'zip -r LearnJS ./LearnJS-win32-x64'
+        sh 'zip -r LearnToWeb ./LearnToWeb-win32-x64'
       }
     }
     stage('Archive') {
       steps {
-        archiveArtifacts(artifacts: 'LearnJS.zip', onlyIfSuccessful: true)
+        archiveArtifacts(artifacts: 'LearnToWeb.zip', onlyIfSuccessful: true)
       }
     }
     stage('Clean workspace') {

@@ -108,7 +108,7 @@ function iframe(event) {
 function downloadCode(codename, callback) {
     const codeID = event.target.dataset.result,
           blocks = $('[data-codename="' + codename + '"]'),
-          dir = os.homedir() + "/.learnjs/";
+          dir = os.homedir() + "/.learntoweb/";
 
     fs.ensureDir(dir, err => {
         if (err) throw err;
@@ -116,8 +116,8 @@ function downloadCode(codename, callback) {
             let result = true;
             if (err) throw err;
             for (let i = 0; i < blocks.length; i++) {
-                fs.writeFileSync(os.homedir() + "/.learnjs/" + blocks[i].dataset.filename, window[codeID + "-" + blocks[i].dataset.filename].getValue());
-                if (blocks[i].dataset.filename.includes(".html") || blocks[i].dataset.filename.includes(".php")) result = os.homedir() + "/.learnjs/" + blocks[i].dataset.filename;
+                fs.writeFileSync(os.homedir() + "/.learntoweb/" + blocks[i].dataset.filename, window[codeID + "-" + blocks[i].dataset.filename].getValue());
+                if (blocks[i].dataset.filename.includes(".html") || blocks[i].dataset.filename.includes(".php")) result = os.homedir() + "/.learntoweb/" + blocks[i].dataset.filename;
             }
             callback(result);
         })
