@@ -19,7 +19,7 @@
   "author": "nejento",
   "license": "GPL-3.0",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^9.0.0"
   },
   "dependencies": {
     "fs-extra": "^9.0.0",
